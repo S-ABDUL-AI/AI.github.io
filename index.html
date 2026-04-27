@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ── SEO & LinkedIn Open Graph ─────────────────────────── -->
+  <title>Sherriff Abdul-Hamid — Government Digital Services Portfolio</title>
+  <meta name="description" content="Decision-support tools for SNAP program officers, Medicaid administrators, and global health funders. EB1-A Extraordinary Ability · Obama Foundation Leader · USAID · UNDP · UKAID."/>
+
+  <meta property="og:type"        content="website"/>
+  <meta property="og:title"       content="Sherriff Abdul-Hamid — Government Digital Services Portfolio"/>
+  <meta property="og:description" content="Production-ready decision-support tools for SNAP program officers, Medicaid administrators, and global health funders. EB1-A Extraordinary Ability · Obama Foundation Leader."/>
+  <meta property="og:url"         content="https://s-abdul-ai.github.io"/>
+  <meta property="og:image"       content="https://raw.githubusercontent.com/S-ABDUL-AI/PORTFOLIO-HUB/main/cover.png"/>
+  <meta property="og:image:width"  content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title"       content="Sherriff Abdul-Hamid — Government Digital Services Portfolio"/>
+  <meta name="twitter:description" content="Decision-support tools for SNAP, Medicaid, and global health funders."/>
+  <meta name="twitter:image"       content="https://raw.githubusercontent.com/S-ABDUL-AI/PORTFOLIO-HUB/main/cover.png"/>
+
+  <!-- ── FONTS ─────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ── RESET & BASE ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:      #0A1F44;
+      --navy-mid:  #152B5C;
+      --navy-deep: #071530;
+      --gold:      #C9A84C;
+      --gold-lt:   #E8C97A;
+      --gold-pale: #F5EDD3;
+      --ink:       #0D0D0D;
+      --body:      #2C3E50;
+      --muted:     #6B7280;
+      --rule:      #E2E6EC;
+      --off-white: #F8F5EE;
+      --white:     #FFFFFF;
+      --red:       #C8382A;
+      --amber:     #B8560A;
+      --green:     #1A7A2E;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--off-white);
+      color: var(--body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── FADE-IN ANIMATIONS ────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    .fade-up  { animation: fadeUp  0.7s ease both; }
+    .fade-in  { animation: fadeIn  0.6s ease both; }
+    .delay-1  { animation-delay: 0.1s; }
+    .delay-2  { animation-delay: 0.2s; }
+    .delay-3  { animation-delay: 0.3s; }
+    .delay-4  { animation-delay: 0.4s; }
+    .delay-5  { animation-delay: 0.5s; }
+    .delay-6  { animation-delay: 0.6s; }
+
+    /* ── HERO ──────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 50%, var(--navy-mid) 100%);
+      border-left: 8px solid var(--gold);
+      padding: 72px 80px 64px;
+      position: relative;
+      overflow: hidden;
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Decorative geometry */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 500px; height: 500px;
+      background: var(--gold);
+      opacity: 0.04;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; right: 120px;
+      width: 280px; height: 280px;
+      background: var(--gold);
+      opacity: 0.05;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-geo {
+      position: absolute;
+      top: 0; right: 0;
+      width: 220px; height: 220px;
+      background: rgba(201,168,76,0.07);
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+    .hero-geo-2 {
+      position: absolute;
+      top: 0; right: 0;
+      width: 150px; height: 150px;
+      background: rgba(201,168,76,0.10);
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+
+    .hero-eyebrow {
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--gold-lt);
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+    }
+
+    .hero-bio {
+      font-size: 14.5px;
+      font-weight: 300;
+      color: #CADCFC;
+      line-height: 1.75;
+      max-width: 660px;
+      margin-bottom: 32px;
+    }
+
+    .hero-creds {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cred-pill {
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.30);
+      color: var(--gold-lt);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 13px;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .cred-pill:hover {
+      background: rgba(201,168,76,0.22);
+    }
+
+    /* ── SECTION WRAPPER ───────────────────────────────────── */
+    .section {
+      padding: 64px 80px;
+    }
+    .section-alt {
+      background: var(--white);
+    }
+    .section-dark {
+      background: var(--navy);
+      border-left: 8px solid var(--gold);
+    }
+
+    .section-eye {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .section-title-light {
+      color: var(--white);
+    }
+
+    .section-sub {
+      font-size: 13.5px;
+      color: var(--muted);
+      max-width: 640px;
+      line-height: 1.65;
+      margin-bottom: 40px;
+    }
+
+    .section-sub-light {
+      color: #CADCFC;
+    }
+
+    /* ── FEATURED CARDS GRID ───────────────────────────────── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-top: 4px solid var(--navy);
+      border-radius: 3px;
+      padding: 26px 22px 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+    }
+
+    .card-number {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--gold);
+      opacity: 0.5;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 2px;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .card-desc {
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 14px;
+      flex: 1;
+    }
+
+    .card-users {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--body);
+      margin-bottom: 18px;
+      letter-spacing: 0.3px;
+    }
+
+    .card-btn {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white) !important;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 10px 18px;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s;
+      align-self: flex-start;
+    }
+    .card-btn:hover {
+      background: var(--gold);
+      color: var(--ink) !important;
+    }
+
+    /* ── DIVIDER ───────────────────────────────────────────── */
+    .hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 0 80px;
+    }
+
+    /* ── OTHER TOOLS LIST ──────────────────────────────────── */
+    .tool-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .tool-row {
+      background: var(--off-white);
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--gold);
+      border-radius: 3px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      transition: box-shadow 0.2s;
+    }
+    .tool-row:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.07); }
+
+    .tool-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+
+    .tool-desc {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .tool-link {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--navy) !important;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 2px;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .tool-link:hover { color: var(--gold) !important; }
+
+    /* ── ABOUT DARK ────────────────────────────────────────── */
+    .about-body {
+      font-size: 14px;
+      font-weight: 300;
+      color: #CADCFC;
+      line-height: 1.8;
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .about-body em {
+      color: var(--gold-lt);
+      font-style: italic;
+    }
+
+    .awards-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .award-pill {
+      background: rgba(201,168,76,0.10);
+      border: 1px solid rgba(201,168,76,0.25);
+      color: var(--gold-lt);
+      font-size: 11px;
+      padding: 5px 12px;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .award-pill:hover { background: rgba(201,168,76,0.20); }
+
+    /* ── WRITING / ARTICLE ─────────────────────────────────── */
+    .article-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-left: 6px solid var(--gold);
+      border-radius: 3px;
+      padding: 24px 28px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      transition: box-shadow 0.2s;
+    }
+    .article-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.09); }
+
+    .article-label {
+      background: var(--navy);
+      color: var(--white);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      white-space: nowrap;
+      margin-top: 4px;
+    }
+
+    .article-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .article-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+
+    .article-link {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--navy) !important;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 2px;
+    }
+
+    /* ── FOOTER ────────────────────────────────────────────── */
+    .footer {
+      background: var(--navy-deep);
+      border-left: 8px solid var(--gold);
+      padding: 32px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-left {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      color: var(--gold-lt) !important;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .footer-link:hover {
+      color: var(--gold) !important;
+      border-color: var(--gold);
+    }
+
+    /* ── RESPONSIVE ────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .hero, .section, .footer { padding-left: 24px; padding-right: 24px; }
+      .hr { margin: 0 24px; }
+      .hero { padding-top: 48px; padding-bottom: 40px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .article-card { flex-direction: column; gap: 12px; }
+      .footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-geo"></div>
+    <div class="hero-geo-2"></div>
+
+    <p class="hero-eyebrow fade-in">Portfolio · Government Digital Services &amp; Decision Science</p>
+
+    <h1 class="hero-name fade-up delay-1">Sherriff<br>Abdul-Hamid</h1>
+
+    <p class="hero-title fade-up delay-2">
+      Product Leader &nbsp;·&nbsp; Global Health Economist &nbsp;·&nbsp; Decision Scientist
+    </p>
+
+    <p class="hero-bio fade-up delay-3">
+      I build decision-support tools that help governments, funders, and program officers
+      allocate scarce resources more fairly — particularly when evidence is incomplete
+      and the people affected have the least power to influence the decision.
+      10+ years directing $200M+ in resource allocation for USAID, UNDP, and UKAID
+      across West Africa and the United States.
+    </p>
+
+    <div class="hero-creds fade-up delay-4">
+      <span class="cred-pill">EB1-A Extraordinary Ability</span>
+      <span class="cred-pill">Obama Foundation Leaders Award</span>
+      <span class="cred-pill">U.S. Dept of State Fellow</span>
+      <span class="cred-pill">Harvard Business School</span>
+      <span class="cred-pill">USAID · UNDP · UKAID</span>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       FEATURED TOOLS
+  ══════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <p class="section-eye fade-up">Featured Work</p>
+    <h2 class="section-title fade-up delay-1">Four Tools. One Mission.</h2>
+    <p class="section-sub fade-up delay-2">
+      Production-ready decision-support tools for SNAP program officers,
+      Medicaid administrators, and global health funders.
+      Each generates a downloadable McKinsey-style PDF policy report.
+    </p>
+
+    <div class="cards-grid">
+
+      <!-- Card 1 -->
+      <div class="card fade-up delay-1" style="border-top-color: var(--red);">
+        <div class="card-number">01</div>
+        <span class="card-tag" style="background: var(--red);">Medicaid · Healthcare</span>
+        <h3 class="card-title">Medicaid &amp; Healthcare Access Risk Monitor</h3>
+        <p class="card-desc">
+          State-level coverage risk scoring for all 50 US states.
+          Identifies where Medicaid access pressure is highest across
+          insurance gaps, cost burden, income capacity, and rural reach —
+          with structured policy briefs and priority-band classification.
+        </p>
+        <p class="card-users">For: State Medicaid officers · Federal policy teams</p>
+        <a href="https://chpghrwawmvddoquvmniwm.streamlit.app/"
+           target="_blank" class="card-btn">Open Tool →</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card fade-up delay-2" style="border-top-color: var(--amber);">
+        <div class="card-number">02</div>
+        <span class="card-tag" style="background: var(--amber);">SNAP · Food Security</span>
+        <h3 class="card-title">Safety Net Risk Monitor</h3>
+        <p class="card-desc">
+          Proactive SNAP and food security vulnerability targeting.
+          Identifies communities at highest risk before they reach crisis point —
+          with structured policy briefs, plain-language regional insights,
+          and immediate recommended actions per area.
+        </p>
+        <p class="card-users">For: SNAP outreach coordinators · State food security teams</p>
+        <a href="https://povertyearlywarningsystem-7rrmkktbi7bwha2nna8gk7.streamlit.app/"
+           target="_blank" class="card-btn">Open Tool →</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card fade-up delay-3" style="border-top-color: var(--navy);">
+        <div class="card-number">03</div>
+        <span class="card-tag" style="background: var(--navy);">Budget · Allocation</span>
+        <h3 class="card-title">Public Budget Allocation Tool</h3>
+        <p class="card-desc">
+          Need-based government budget distribution across regions.
+          Generates a ministerial-grade decision brief with risk flags,
+          implication analysis, and immediate action steps —
+          designed for program directors managing benefits delivery cycles.
+        </p>
+        <p class="card-users">For: Government program directors · Budget administrators</p>
+        <a href="https://smart-resource-allocation-dashboard-eudzw5r2f9pbu4qyw3psez.streamlit.app/"
+           target="_blank" class="card-btn">Open Tool →</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card fade-up delay-4" style="border-top-color: var(--green);">
+        <div class="card-number">04</div>
+        <span class="card-tag" style="background: var(--green);">Global Health · CEA</span>
+        <h3 class="card-title">GovFund Allocation Engine</h3>
+        <p class="card-desc">
+          Cost-effectiveness decision tool for global health funders.
+          Models cost-per-life-saved across malaria, nutrition, and social
+          protection interventions — with sensitivity analysis and
+          bottom-line funding prioritization recommendations.
+        </p>
+        <p class="card-users">For: Global health funders · USAID · Gates Foundation officers</p>
+        <a href="https://impact-allocation-engine-ahxxrbgwmvyapwmifahk2b.streamlit.app/"
+           target="_blank" class="card-btn">Open Tool →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="hr"/>
+
+  <!-- ══════════════════════════════════════════════════════════
+       ADDITIONAL TOOLS
+  ══════════════════════════════════════════════════════════ -->
+  <section class="section section-alt">
+    <p class="section-eye fade-up">Additional Tools</p>
+    <h2 class="section-title fade-up delay-1">More from the Portfolio</h2>
+    <p class="section-sub fade-up delay-2">
+      Supporting tools covering global health data pipelines and supply chain optimisation.
+    </p>
+
+    <div class="tool-list fade-up delay-3">
+      <div class="tool-row">
+        <div>
+          <div class="tool-name">Global Vaccination Coverage Explorer</div>
+          <div class="tool-desc">WHO vaccination data across 190+ countries — automated ETL pipeline for public health program managers and researchers.</div>
+        </div>
+        <a href="https://worldvaccinationcoverage-etl-ftvwbikifyyx78xyy2j3zv.streamlit.app/"
+           target="_blank" class="tool-link">Open →</a>
+      </div>
+      <div class="tool-row">
+        <div>
+          <div class="tool-name">Humanitarian Procurement Optimiser</div>
+          <div class="tool-desc">Linear programming tool for logistics cost minimisation across field program supply chains in low-resource environments.</div>
+        </div>
+        <a href="https://appuctionplanningoptimizationlinearprogramming-6wd4sg3wmwesrxp.streamlit.app/"
+           target="_blank" class="tool-link">Open →</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hr"/>
+
+  <!-- ══════════════════════════════════════════════════════════
+       WRITING
+  ══════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <p class="section-eye fade-up">Research &amp; Writing</p>
+    <h2 class="section-title fade-up delay-1">Published Analysis</h2>
+    <p class="section-sub fade-up delay-2">
+      Public-facing research applying cost-effectiveness frameworks
+      to real funding decisions in global health.
+    </p>
+
+    <div class="fade-up delay-3">
+      <div class="article-card">
+        <span class="article-label">Article</span>
+        <div>
+          <h3 class="article-title">What Does It Cost to Save a Life?</h3>
+          <p class="article-desc">
+            The same budget that saves 80 lives through cash transfers saves 220 through ITNs.
+            A cost-effectiveness framework comparing malaria interventions across Sub-Saharan Africa —
+            with sensitivity analysis, funding prioritization, and an honest account of
+            where the model breaks down.
+          </p>
+          <a href="https://www.linkedin.com/in/abdul-hamid-sherriff-08583354/"
+             target="_blank" class="article-link">Read on LinkedIn →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       ABOUT DARK
+  ══════════════════════════════════════════════════════════ -->
+  <section class="section section-dark">
+    <p class="section-eye fade-up" style="color: var(--gold); opacity:0.8;">About the Work</p>
+    <h2 class="section-title section-title-light fade-up delay-1">
+      Built for Decisions That Cannot Wait for Perfect Evidence
+    </h2>
+
+    <p class="about-body fade-up delay-2">
+      Every tool in this portfolio was built to answer one question:
+      <em>what do you do when evidence is incomplete, resources are limited,
+      and a decision still has to be made?</em>
+      <br><br>
+      I have spent a decade building frameworks for exactly that situation —
+      across international development programs in West Africa, safety net
+      benefits delivery in the United States, and global health funding decisions
+      reaching millions of underserved people. These tools are the public-facing
+      expression of that work. Contributions to this body of work formed the
+      basis of a successful EB1-A Extraordinary Ability petition — approved by
+      U.S. Citizenship and Immigration Services in 2024.
+    </p>
+
+    <div class="awards-grid fade-up delay-3">
+      <span class="award-pill">EB1-A Extraordinary Ability — USCIS, 2024</span>
+      <span class="award-pill">Obama Foundation Leaders Award — Top 1.3%, 2023</span>
+      <span class="award-pill">Mandela Washington Fellow — Top 0.3%, U.S. Dept of State</span>
+      <span class="award-pill">Harvard Business School — Senior Executive Program</span>
+      <span class="award-pill">USADF + Citibank Grant — Top 0.1% globally</span>
+      <span class="award-pill">Invited — VP Kamala Harris VVIP Event, U.S. Embassy Ghana</span>
+      <span class="award-pill">Invited — UN Food Security Program, Ambassador Linda Thomas-Greenfield</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-left">
+      <strong style="color: #E0D8C8; font-size: 13px;">Sherriff Abdul-Hamid</strong><br>
+      Los Angeles, CA &nbsp;·&nbsp; sherriffhamid001@gmail.com<br>
+      U.S. Permanent Resident — Fully Work-Authorized
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/abdul-hamid-sherriff-08583354/"
+         target="_blank" class="footer-link">LinkedIn</a>
+      <a href="https://github.com/S-ABDUL-AI"
+         target="_blank" class="footer-link">GitHub</a>
+      <a href="https://share.streamlit.io/user/s-abdul-ai"
+         target="_blank" class="footer-link">All Apps</a>
+      <a href="mailto:sherriffhamid001@gmail.com"
+         class="footer-link">Email</a>
+    </div>
+  </footer>
+
+</body>
+</html>
