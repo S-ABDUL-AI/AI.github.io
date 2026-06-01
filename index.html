@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <!-- ── SEO & LinkedIn Open Graph ─────────────────────────── -->
-  <title>Sherriff Abdul-Hamid — Government Digital Services Portfolio</title>
-  <meta name="description" content="Decision-support tools for SNAP program officers, Medicaid administrators, and global health funders. EB1-A Extraordinary Ability · Obama Foundation Leader · USAID · UNDP · UKAID."/>
+  <title>Sherriff Abdul-Hamid — Public-Sector AI Research & Decision Science Portfolio</title>
+  <meta name="description" content="Development economist and public-sector AI researcher studying how AI-assisted targeting systems exclude vulnerable populations from social protection. EB1-A Extraordinary Ability · Obama Foundation Leader · USAID · UNDP · UKAID."/>
 
   <meta property="og:type"        content="website"/>
-  <meta property="og:title"       content="Sherriff Abdul-Hamid — Government Digital Services Portfolio"/>
-  <meta property="og:description" content="Production-ready decision-support tools for SNAP program officers, Medicaid administrators, and global health funders. EB1-A Extraordinary Ability · Obama Foundation Leader."/>
+  <meta property="og:title"       content="Sherriff Abdul-Hamid — Public-Sector AI Research & Decision Science Portfolio"/>
+  <meta property="og:description" content="Development economist studying representation failures and distribution shift in public-sector AI systems. Open-source decision-support tools for SNAP, Medicaid, and global health funders."/>
   <meta property="og:url"         content="https://s-abdul-ai.github.io"/>
   <meta property="og:image"       content="https://raw.githubusercontent.com/S-ABDUL-AI/PORTFOLIO-HUB/main/cover.png"/>
   <meta property="og:image:width"  content="1200"/>
   <meta property="og:image:height" content="630"/>
 
   <meta name="twitter:card"        content="summary_large_image"/>
-  <meta name="twitter:title"       content="Sherriff Abdul-Hamid — Government Digital Services Portfolio"/>
-  <meta name="twitter:description" content="Decision-support tools for SNAP, Medicaid, and global health funders."/>
+  <meta name="twitter:title"       content="Sherriff Abdul-Hamid — Public-Sector AI Research & Decision Science Portfolio"/>
+  <meta name="twitter:description" content="Development economist and public-sector AI researcher. Open-source tools for SNAP, Medicaid, and global health funders."/>
   <meta name="twitter:image"       content="https://raw.githubusercontent.com/S-ABDUL-AI/PORTFOLIO-HUB/main/cover.png"/>
 
   <!-- ── FONTS ─────────────────────────────────────────────── -->
@@ -27,7 +27,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet"/>
 
   <style>
-    /* ── RESET & BASE ──────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -60,7 +59,6 @@
 
     a { text-decoration: none; color: inherit; }
 
-    /* ── FADE-IN ANIMATIONS ────────────────────────────────── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0);    }
@@ -79,7 +77,6 @@
     .delay-5  { animation-delay: 0.5s; }
     .delay-6  { animation-delay: 0.6s; }
 
-    /* ── HERO ──────────────────────────────────────────────── */
     .hero {
       background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 50%, var(--navy-mid) 100%);
       border-left: 8px solid var(--gold);
@@ -92,7 +89,6 @@
       justify-content: center;
     }
 
-    /* Decorative geometry */
     .hero::before {
       content: '';
       position: absolute;
@@ -181,17 +177,10 @@
       border-radius: 2px;
       transition: background 0.2s;
     }
-    .cred-pill:hover {
-      background: rgba(201,168,76,0.22);
-    }
+    .cred-pill:hover { background: rgba(201,168,76,0.22); }
 
-    /* ── SECTION WRAPPER ───────────────────────────────────── */
-    .section {
-      padding: 64px 80px;
-    }
-    .section-alt {
-      background: var(--white);
-    }
+    .section { padding: 64px 80px; }
+    .section-alt { background: var(--white); }
     .section-dark {
       background: var(--navy);
       border-left: 8px solid var(--gold);
@@ -215,9 +204,7 @@
       line-height: 1.2;
     }
 
-    .section-title-light {
-      color: var(--white);
-    }
+    .section-title-light { color: var(--white); }
 
     .section-sub {
       font-size: 13.5px;
@@ -227,11 +214,8 @@
       margin-bottom: 40px;
     }
 
-    .section-sub-light {
-      color: #CADCFC;
-    }
+    .section-sub-light { color: #CADCFC; }
 
-    /* ── FEATURED CARDS GRID ───────────────────────────────── */
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -250,13 +234,6 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       position: relative;
       overflow: hidden;
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
     }
 
     .card:hover {
@@ -329,14 +306,12 @@
       color: var(--ink) !important;
     }
 
-    /* ── DIVIDER ───────────────────────────────────────────── */
     .hr {
       border: none;
       border-top: 1px solid var(--rule);
       margin: 0 80px;
     }
 
-    /* ── OTHER TOOLS LIST ──────────────────────────────────── */
     .tool-list { display: flex; flex-direction: column; gap: 10px; }
 
     .tool-row {
@@ -360,10 +335,7 @@
       margin-bottom: 3px;
     }
 
-    .tool-desc {
-      font-size: 12px;
-      color: var(--muted);
-    }
+    .tool-desc { font-size: 12px; color: var(--muted); }
 
     .tool-link {
       font-size: 10px;
@@ -378,7 +350,6 @@
     }
     .tool-link:hover { color: var(--gold) !important; }
 
-    /* ── ABOUT DARK ────────────────────────────────────────── */
     .about-body {
       font-size: 14px;
       font-weight: 300;
@@ -410,7 +381,6 @@
     }
     .award-pill:hover { background: rgba(201,168,76,0.20); }
 
-    /* ── WRITING / ARTICLE ─────────────────────────────────── */
     .article-card {
       background: var(--white);
       border: 1px solid var(--rule);
@@ -422,6 +392,7 @@
       align-items: flex-start;
       gap: 24px;
       transition: box-shadow 0.2s;
+      margin-bottom: 16px;
     }
     .article-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.09); }
 
@@ -464,7 +435,6 @@
       padding-bottom: 2px;
     }
 
-    /* ── FOOTER ────────────────────────────────────────────── */
     .footer {
       background: var(--navy-deep);
       border-left: 8px solid var(--gold);
@@ -503,7 +473,6 @@
       border-color: var(--gold);
     }
 
-    /* ── RESPONSIVE ────────────────────────────────────────── */
     @media (max-width: 768px) {
       .hero, .section, .footer { padding-left: 24px; padding-right: 24px; }
       .hr { margin: 0 24px; }
@@ -517,27 +486,29 @@
 
 <body>
 
-  <!-- ══════════════════════════════════════════════════════════
-       HERO
-  ══════════════════════════════════════════════════════════ -->
+  <!-- HERO — UPDATED -->
   <section class="hero">
     <div class="hero-geo"></div>
     <div class="hero-geo-2"></div>
 
-    <p class="hero-eyebrow fade-in">Portfolio · Government Digital Services &amp; Decision Science</p>
+    <p class="hero-eyebrow fade-in">Portfolio · Public-Sector AI Research &amp; Decision Science</p>
 
     <h1 class="hero-name fade-up delay-1">Sherriff<br>Abdul-Hamid</h1>
 
+    <!-- FIX 1: Title updated -->
     <p class="hero-title fade-up delay-2">
-      Product Leader &nbsp;·&nbsp; Global Health Economist &nbsp;·&nbsp; Decision Scientist
+      Development Economist &nbsp;·&nbsp; Public-Sector AI Researcher &nbsp;·&nbsp; Applied Data Scientist
     </p>
 
+    <!-- FIX 2: Bio updated — $200M+ removed, research framing added -->
     <p class="hero-bio fade-up delay-3">
-      I build decision-support tools that help governments, funders, and program officers
-      allocate scarce resources more fairly — particularly when evidence is incomplete
-      and the people affected have the least power to influence the decision.
-      10+ years directing $200M+ in resource allocation for USAID, UNDP, and UKAID
-      across West Africa and the United States.
+      I study how AI-assisted targeting systems create representation failures that exclude
+      vulnerable populations from social protection coverage — drawing on 14 years applying
+      econometrics, causal inference, and cost-effectiveness analysis to public-sector
+      decision-making across Sub-Saharan Africa and the United States. My current research
+      examines distribution shift and systematic missingness in public-sector AI systems,
+      grounded in direct field experience enrolling 1,250 women into Ghana's National Health
+      Insurance Authority who were invisible to both official digital enrollment pathways.
     </p>
 
     <div class="hero-creds fade-up delay-4">
@@ -549,22 +520,19 @@
     </div>
   </section>
 
-
-  <!-- ══════════════════════════════════════════════════════════
-       FEATURED TOOLS
-  ══════════════════════════════════════════════════════════ -->
+  <!-- FEATURED TOOLS — FIX 3: Connecting sentence added -->
   <section class="section">
     <p class="section-eye fade-up">Featured Work</p>
     <h2 class="section-title fade-up delay-1">Four Tools. One Mission.</h2>
     <p class="section-sub fade-up delay-2">
-      Production-ready decision-support tools for SNAP program officers,
-      Medicaid administrators, and global health funders.
-      Each generates a downloadable McKinsey-style PDF policy report.
+      These tools were built from the same question that drives my research: what happens
+      when the people most in need are the least visible to the systems designed to serve them?
+      Production-ready decision-support tools for SNAP programme officers, Medicaid
+      administrators, and global health funders — each generating a downloadable policy report.
     </p>
 
     <div class="cards-grid">
 
-      <!-- Card 1 -->
       <div class="card fade-up delay-1" style="border-top-color: var(--red);">
         <div class="card-number">01</div>
         <span class="card-tag" style="background: var(--red);">Medicaid · Healthcare</span>
@@ -580,7 +548,6 @@
            target="_blank" class="card-btn">Open Tool →</a>
       </div>
 
-      <!-- Card 2 -->
       <div class="card fade-up delay-2" style="border-top-color: var(--amber);">
         <div class="card-number">02</div>
         <span class="card-tag" style="background: var(--amber);">SNAP · Food Security</span>
@@ -596,7 +563,6 @@
            target="_blank" class="card-btn">Open Tool →</a>
       </div>
 
-      <!-- Card 3 -->
       <div class="card fade-up delay-3" style="border-top-color: var(--navy);">
         <div class="card-number">03</div>
         <span class="card-tag" style="background: var(--navy);">Budget · Allocation</span>
@@ -605,14 +571,13 @@
           Need-based government budget distribution across regions.
           Generates a ministerial-grade decision brief with risk flags,
           implication analysis, and immediate action steps —
-          designed for program directors managing benefits delivery cycles.
+          designed for programme directors managing benefits delivery cycles.
         </p>
-        <p class="card-users">For: Government program directors · Budget administrators</p>
+        <p class="card-users">For: Government programme directors · Budget administrators</p>
         <a href="https://public-budget-allocation-tool-6jnjrfp52xwvvcm8twan9z.streamlit.app/"
            target="_blank" class="card-btn">Open Tool →</a>
       </div>
 
-      <!-- Card 4 -->
       <div class="card fade-up delay-4" style="border-top-color: var(--green);">
         <div class="card-number">04</div>
         <span class="card-tag" style="background: var(--green);">Global Health · CEA</span>
@@ -621,7 +586,7 @@
           Cost-effectiveness decision tool for global health funders.
           Models cost-per-life-saved across malaria, nutrition, and social
           protection interventions — with sensitivity analysis and
-          bottom-line funding prioritization recommendations.
+          bottom-line funding prioritisation recommendations.
         </p>
         <p class="card-users">For: Global health funders · USAID · Gates Foundation officers</p>
         <a href="https://govfund--allocation-engine-5m2xtatvrc3haddomjjzam.streamlit.app/"
@@ -633,9 +598,7 @@
 
   <hr class="hr"/>
 
-  <!-- ══════════════════════════════════════════════════════════
-       ADDITIONAL TOOLS
-  ══════════════════════════════════════════════════════════ -->
+  <!-- ADDITIONAL TOOLS -->
   <section class="section section-alt">
     <p class="section-eye fade-up">Additional Tools</p>
     <h2 class="section-title fade-up delay-1">More from the Portfolio</h2>
@@ -647,7 +610,7 @@
       <div class="tool-row">
         <div>
           <div class="tool-name">Global Vaccination Coverage Explorer</div>
-          <div class="tool-desc">WHO vaccination data across 190+ countries — automated ETL pipeline for public health program managers and researchers.</div>
+          <div class="tool-desc">WHO vaccination data across 190+ countries — automated ETL pipeline with weekly refresh via GitHub Actions for public health programme managers and researchers.</div>
         </div>
         <a href="https://global-vaccination-coverage-explorer-6xop7p8cklrs2j3zp2ny7b.streamlit.app/"
            target="_blank" class="tool-link">Open →</a>
@@ -655,7 +618,7 @@
       <div class="tool-row">
         <div>
           <div class="tool-name">Humanitarian Procurement Optimiser</div>
-          <div class="tool-desc">Linear programming tool for logistics cost minimisation across field program supply chains in low-resource environments.</div>
+          <div class="tool-desc">Linear programming tool for logistics cost minimisation across field programme supply chains in low-resource environments.</div>
         </div>
         <a href="https://appuctionplanningoptimizationlinearprogramming-6wd4sg3wmwesrxp.streamlit.app/"
            target="_blank" class="tool-link">Open →</a>
@@ -665,18 +628,35 @@
 
   <hr class="hr"/>
 
-  <!-- ══════════════════════════════════════════════════════════
-       WRITING
-  ══════════════════════════════════════════════════════════ -->
+  <!-- RESEARCH & WRITING — FIX 5: Current research entry added -->
   <section class="section">
     <p class="section-eye fade-up">Research &amp; Writing</p>
-    <h2 class="section-title fade-up delay-1">Published Analysis</h2>
+    <h2 class="section-title fade-up delay-1">Research and Published Analysis</h2>
     <p class="section-sub fade-up delay-2">
-      Public-facing research applying cost-effectiveness frameworks
-      to real funding decisions in global health.
+      Current research and public-facing analysis applying empirical methods
+      to AI safety, social protection, and global health funding decisions.
     </p>
 
     <div class="fade-up delay-3">
+
+      <!-- Current Research Entry -->
+      <div class="article-card">
+        <span class="article-label">Current Research</span>
+        <div>
+          <h3 class="article-title">Auditing Distribution Shift and Representation Failures in Public-Sector AI Systems</h3>
+          <p class="article-desc">
+            A comparative study of Ghana and the United States examining how systematic
+            missingness and representation bias in administrative datasets create distribution
+            shift in AI systems deployed in social protection settings. Using Ghana's National
+            Health Insurance Authority and US Medicaid administrative data to measure how
+            AI systems trained on institutionally visible populations fail hard-to-reach
+            populations — and what guardrails can detect and mitigate these failures
+            before they affect access to critical benefits.
+          </p>
+        </div>
+      </div>
+
+      <!-- Published Article -->
       <div class="article-card">
         <span class="article-label">Article</span>
         <div>
@@ -684,19 +664,18 @@
           <p class="article-desc">
             The same budget that saves 80 lives through cash transfers saves 220 through ITNs.
             A cost-effectiveness framework comparing malaria interventions across Sub-Saharan Africa —
-            with sensitivity analysis, funding prioritization, and an honest account of
+            with sensitivity analysis, funding prioritisation, and an honest account of
             where the model breaks down.
           </p>
-          <a href="https://www.linkedin.com/in/abdul-hamid-sherriff-08583354/"
-             target="_blank" class="https://www.linkedin.com/pulse/question-nobody-asks-directly-why-silence-costing-lives-sherriff-woesc/?trackingId=PmdSKnM78gJsJnW3QdhINA%3D%3D">Read on LinkedIn →</a>
+          <a href="https://www.linkedin.com/pulse/question-nobody-asks-directly-why-silence-costing-lives-sherriff-woesc/?trackingId=PmdSKnM78gJsJnW3QdhINA%3D%3D"
+             target="_blank" class="article-link">Read on LinkedIn →</a>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════════════════
-       ABOUT DARK
-  ══════════════════════════════════════════════════════════ -->
+  <!-- ABOUT DARK — FIX 4: $200M+ removed, framing updated -->
   <section class="section section-dark">
     <p class="section-eye fade-up" style="color: var(--gold); opacity:0.8;">About the Work</p>
     <h2 class="section-title section-title-light fade-up delay-1">
@@ -708,13 +687,18 @@
       <em>what do you do when evidence is incomplete, resources are limited,
       and a decision still has to be made?</em>
       <br><br>
-      I have spent a decade building frameworks for exactly that situation —
-      across international development programs in West Africa, safety net
-      benefits delivery in the United States, and global health funding decisions
-      reaching millions of underserved people. These tools are the public-facing
-      expression of that work. Contributions to this body of work formed the
-      basis of a successful EB1-A Extraordinary Ability petition — approved by
-      U.S. Citizenship and Immigration Services in 2024.
+      I have spent 14 years building frameworks for exactly that situation —
+      across social protection and public health programmes in West Africa,
+      safety net benefits delivery in the United States, and global health
+      funding decisions affecting millions of underserved people. My current
+      research examines how AI-assisted decision systems create representation
+      failures that exclude the most vulnerable populations from public services —
+      grounded in direct field experience enrolling 1,250 women into Ghana's
+      National Health Insurance Authority who were invisible to both official
+      digital enrollment pathways. These tools are the public-facing expression
+      of that work. Contributions to this body of work formed the basis of a
+      successful EB1-A Extraordinary Ability petition — approved by U.S.
+      Citizenship and Immigration Services in 2024.
     </p>
 
     <div class="awards-grid fade-up delay-3">
@@ -728,9 +712,7 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-left">
       <strong style="color: #E0D8C8; font-size: 13px;">Sherriff Abdul-Hamid</strong><br>
