@@ -45,6 +45,7 @@
       --red:       #C8382A;
       --amber:     #B8560A;
       --green:     #1A7A2E;
+      --energy:    #1F3864;
     }
 
     html { scroll-behavior: smooth; }
@@ -306,6 +307,38 @@
       color: var(--ink) !important;
     }
 
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-self: flex-start;
+    }
+
+    .card-btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--navy) !important;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 2px;
+      border: 2px solid var(--navy);
+      transition: background 0.2s, color 0.2s;
+    }
+    .card-btn-secondary:hover {
+      background: var(--navy);
+      color: var(--white) !important;
+    }
+
+    .section-sub a {
+      color: var(--navy);
+      font-weight: 700;
+      border-bottom: 2px solid var(--gold);
+    }
+    .section-sub a:hover { color: var(--gold); }
+
     .hr {
       border: none;
       border-top: 1px solid var(--rule);
@@ -491,13 +524,13 @@
     <div class="hero-geo"></div>
     <div class="hero-geo-2"></div>
 
-    <p class="hero-eyebrow fade-in">Portfolio · Public-Sector AI Research &amp; Decision Science</p>
+    <p class="hero-eyebrow fade-in">Portfolio · Public-Sector AI Research, Energy Analytics &amp; Decision Science</p>
 
     <h1 class="hero-name fade-up delay-1">Sherriff<br>Abdul-Hamid</h1>
 
     <!-- FIX 1: Title updated -->
     <p class="hero-title fade-up delay-2">
-      Development Economist &nbsp;·&nbsp; Public-Sector AI Researcher &nbsp;·&nbsp; Applied Data Scientist
+      Data Scientist &nbsp;·&nbsp; Energy Economist &nbsp;·&nbsp; Public-Sector AI Researcher
     </p>
 
     <!-- FIX 2: Bio updated — $200M+ removed, research framing added -->
@@ -529,6 +562,8 @@
       when the people most in need are the least visible to the systems designed to serve them?
       Production-ready decision-support tools for SNAP programme officers, Medicaid
       administrators, and global health funders — each generating a downloadable policy report.
+      A separate portfolio of energy infrastructure analytics tools is available at
+      <a href="https://energy-portfolio.streamlit.app" target="_blank">energy-portfolio.streamlit.app</a>.
     </p>
 
     <div class="cards-grid">
@@ -595,6 +630,101 @@
 
     </div>
   </section>
+
+  <!-- ENERGY SECTION -->
+  <section class="section section-alt">
+    <p class="section-eye fade-up">Energy Infrastructure · Utility Analytics</p>
+    <h2 class="section-title fade-up delay-1">Energy Infrastructure Analytics</h2>
+    <p class="section-sub fade-up delay-2">
+      Four production-grade tools applying machine learning, econometrics, and
+      expected-value optimization to the analytical problems that electric utility
+      infrastructure teams face — from wildfire risk scoring and capital investment
+      prioritization to demand forecasting and energy price shock transmission.
+    </p>
+    <p class="section-sub fade-up delay-2" style="margin-top: -28px; margin-bottom: 40px;">
+      <a href="https://energy-portfolio.streamlit.app" target="_blank">View full energy portfolio →</a>
+    </p>
+
+    <div class="cards-grid">
+
+      <div class="card fade-up delay-1" style="border-top-color: var(--red);">
+        <div class="card-number">E1</div>
+        <span class="card-tag" style="background: var(--red);">Wildfire Risk · Asset Failure · CPUC RBDM</span>
+        <h3 class="card-title">California Grid Asset Risk &amp; Wildfire Vulnerability Dashboard</h3>
+        <p class="card-desc">
+          Random Forest failure prediction model (ROC-AUC 0.86) scoring 600 simulated
+          Southern California utility assets across 9 environmental and operational features.
+          Budget optimization engine delivering $28M+ in risk reduction from a $3M maintenance
+          budget — aligned to CPUC Risk-Based Decision-Making thresholds.
+        </p>
+        <p class="card-users">For: Utility asset managers · Grid operations teams · Regulatory analysts</p>
+        <div class="card-actions">
+          <a href="https://california-grid-asset-risk-wildfire-vulnerability-dashboard-hm.streamlit.app"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/California-Grid-Asset-Risk-Wildfire-Vulnerability-Dashboard"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card fade-up delay-2" style="border-top-color: var(--energy);">
+        <div class="card-number">E2</div>
+        <span class="card-tag" style="background: var(--energy);">Benefit-Cost Analysis · Portfolio Optimization · Monte Carlo</span>
+        <h3 class="card-title">Grid Investment Prioritization Engine</h3>
+        <p class="card-desc">
+          Expected-value portfolio optimization model ranking 100 infrastructure projects
+          by BCR, NPV, and risk reduction per dollar under budget constraints. Monte Carlo
+          P10–P90 uncertainty quantification and efficient frontier analysis — aligned to
+          CPUC RBDM benefit-cost filing requirements.
+        </p>
+        <p class="card-users">For: Capital planning teams · Regulatory economists · Infrastructure directors</p>
+        <div class="card-actions">
+          <a href="https://grid-investment-prioritization-engine.streamlit.app"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/grid-investment-prioritization-engine"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card fade-up delay-3" style="border-top-color: var(--amber);">
+        <div class="card-number">E3</div>
+        <span class="card-tag" style="background: var(--amber);">SARIMA · Load Forecasting · EV Adoption · Solar Integration</span>
+        <h3 class="card-title">California Electricity Load Forecasting &amp; Grid Demand Planning</h3>
+        <p class="card-desc">
+          SARIMA time series model forecasting electricity demand 12–24 months ahead across
+          four Southern California service territory zones. Interactive EV adoption and rooftop
+          solar penetration scenario builder with capacity investment trigger analysis.
+        </p>
+        <p class="card-users">For: Grid planners · Demand forecasting teams · Integrated resource planning analysts</p>
+        <div class="card-actions">
+          <a href="https://california-grid-demand-forecast.streamlit.app"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/california-grid-demand-forecast"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card fade-up delay-4" style="border-top-color: var(--green);">
+        <div class="card-number">E4</div>
+        <span class="card-tag" style="background: var(--green);">VAR · VECM · Johansen Cointegration · IRF · FEVD</span>
+        <h3 class="card-title">Oil Price Shock Transmission Dashboard</h3>
+        <p class="card-desc">
+          Interactive econometric research tool built from MSc Economics thesis research
+          (KNUST, 2022). Full pipeline — ADF unit root tests, Johansen cointegration, VAR
+          estimation, orthogonalized IRF, and FEVD — exploring oil price shock transmission
+          into Ghana's public debt dynamics across 37 years of annual data.
+        </p>
+        <p class="card-users">For: Energy economists · Regulatory economists · Policy researchers</p>
+        <div class="card-actions">
+          <a href="https://oil-price-shock-transmission.streamlit.app"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/oil-price-shock-transmission"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- END ENERGY SECTION -->
 
   <hr class="hr"/>
 
@@ -724,6 +854,8 @@
          target="_blank" class="footer-link">LinkedIn</a>
       <a href="https://github.com/S-ABDUL-AI"
          target="_blank" class="footer-link">GitHub</a>
+      <a href="https://energy-portfolio.streamlit.app"
+         target="_blank" class="footer-link">Energy Portfolio</a>
       <a href="https://share.streamlit.io/user/s-abdul-ai"
          target="_blank" class="footer-link">All Apps</a>
       <a href="mailto:sherriffhamid001@gmail.com"
