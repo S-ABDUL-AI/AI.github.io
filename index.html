@@ -513,6 +513,105 @@
       border-color: var(--gold);
     }
 
+    .section-label {
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      font-size: 13.5px;
+      color: var(--muted);
+      max-width: 640px;
+      line-height: 1.65;
+      margin-bottom: 40px;
+    }
+
+    .section-subtitle a {
+      color: var(--navy);
+      font-weight: 700;
+      border-bottom: 2px solid var(--gold);
+    }
+    .section-subtitle a:hover { color: var(--gold); }
+
+    .tool-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-top: 4px solid var(--navy);
+      border-radius: 3px;
+      padding: 26px 22px 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .tool-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+    }
+
+    .card-tags {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .card-description {
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+
+    .card-audience {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--body);
+      margin-bottom: 18px;
+      letter-spacing: 0.3px;
+    }
+
+    .card-link {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white) !important;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 10px 18px;
+      border-radius: 2px;
+      margin-right: 8px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .card-link:hover {
+      background: var(--gold);
+      color: var(--ink) !important;
+    }
+
+    .card-link-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--navy) !important;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 2px;
+      border: 2px solid var(--navy);
+      transition: background 0.2s, color 0.2s;
+    }
+    .card-link-secondary:hover {
+      background: var(--navy);
+      color: var(--white) !important;
+    }
+
     @media (max-width: 768px) {
       .hero, .section, .footer { padding-left: 24px; padding-right: 24px; }
       .hr { margin: 0 24px; }
@@ -531,13 +630,13 @@
     <div class="hero-geo"></div>
     <div class="hero-geo-2"></div>
 
-    <p class="hero-eyebrow fade-in">Portfolio · Public-Sector AI Research, Energy Analytics &amp; Decision Science</p>
+    <p class="hero-eyebrow fade-in">Portfolio · Applied Economics, AI Policy Research &amp; Decision Science</p>
 
     <h1 class="hero-name fade-up delay-1">Sherriff<br>Abdul-Hamid</h1>
 
     <!-- FIX 1: Title updated -->
     <p class="hero-title fade-up delay-2">
-      Data Scientist &nbsp;·&nbsp; Energy Economist &nbsp;·&nbsp; Public-Sector AI Researcher
+      Applied Economist &nbsp;·&nbsp; Data Scientist &nbsp;·&nbsp; AI &amp; Public Policy Researcher &nbsp;·&nbsp; Causal Inference &nbsp;·&nbsp; Decision Intelligence
     </p>
 
     <!-- FIX 2: Bio updated — $200M+ removed, research framing added -->
@@ -566,13 +665,15 @@
     <h2 class="section-title fade-up delay-1">Two Portfolios. One Question.</h2>
     <p class="section-sub fade-up delay-2">
       What happens when the people most in need are the least visible to the
-      systems designed to serve them? This portfolio contains two bodies of applied
+      systems designed to serve them? This portfolio contains three bodies of applied
       work built from that question. The first — social protection and public health
       tools for SNAP programme officers, Medicaid administrators, and global health
-      funders, each generating a downloadable policy report. The second — energy
-      infrastructure analytics tools for utility planners, grid investment analysts,
-      and regulatory economists, available in full at
+      funders. The second — energy infrastructure analytics tools for utility planners,
+      grid investment analysts, and regulatory economists, available in full at
       <a href="https://energy-portfolio.streamlit.app" target="_blank">energy-portfolio.streamlit.app</a>.
+      The third — marketplace analytics tools applying causal inference, experimentation
+      science, and economic modelling to two-sided platform strategy, available in full at
+      <a href="https://marketplace-analytics-portfolio.streamlit.app" target="_blank">marketplace-analytics-portfolio.streamlit.app</a>.
     </p>
 
     <div class="cards-grid">
@@ -751,6 +852,78 @@
   </section>
   <!-- END ENERGY SECTION -->
 
+  <!-- MARKETPLACE SECTION -->
+  <section class="section">
+    <div class="section-label">Marketplace Analytics · Causal Inference · Platform Economics</div>
+    <h2 class="section-title">Marketplace Analytics Portfolio</h2>
+    <p class="section-subtitle">
+      Three production-grade tools applying causal inference, experimentation science,
+      and marketplace economics to the strategic questions that two-sided platform
+      analytics teams face — from A/B testing and network effects to supply-demand
+      optimisation and intervention incrementality.
+    </p>
+    <p class="section-subtitle" style="margin-top: 8px;">
+      <a href="https://marketplace-analytics-portfolio.streamlit.app" target="_blank">
+        View full marketplace portfolio →
+      </a>
+    </p>
+
+    <!-- Card M1 -->
+    <div class="tool-card">
+      <div class="card-number">M1</div>
+      <div class="card-tags">CUPED · Sequential Testing · Network Effects · Uplift Modelling · Bayesian A/B</div>
+      <h3 class="card-title">Marketplace Growth & Experimentation Lab</h3>
+      <p class="card-description">
+        Advanced experimentation platform demonstrating CUPED variance reduction,
+        network effects contamination analysis, sequential testing with alpha spending,
+        promotion uplift modelling with four-quadrant segmentation, and a Bayesian
+        decision framework with automated ship/no-ship recommendations.
+        Includes an AI Analytics Copilot powered by Claude.
+      </p>
+      <p class="card-audience">For: Product analytics teams · Growth scientists · Experimentation leads</p>
+      <a class="card-link" href="https://marketplacegrowthexperimentationlab.streamlit.app" target="_blank">Open Tool →</a>
+      <a class="card-link-secondary" href="https://github.com/S-ABDUL-AI/marketplace-experimentation-lab" target="_blank">GitHub →</a>
+    </div>
+
+    <!-- Card M2 -->
+    <div class="tool-card">
+      <div class="card-number">M2</div>
+      <div class="card-tags">DiD · Synthetic Control · PSM · Instrumental Variables · Event Study</div>
+      <h3 class="card-title">Marketplace Causal Inference & Incrementality Engine</h3>
+      <p class="card-description">
+        Five-method causal inference platform for estimating the true incremental
+        impact of marketplace interventions. Answers whether a programme caused
+        booking growth or would growth have happened anyway. Covers
+        Difference-in-Differences, Synthetic Control, Propensity Score Matching,
+        Instrumental Variables, Event Study, and an Incrementality Simulator
+        with ROI decision output.
+      </p>
+      <p class="card-audience">For: Marketplace science teams · Economics teams · Strategy analytics</p>
+      <a class="card-link" href="https://marketplace-causal-inference-incrementality-engine.streamlit.app" target="_blank">Open Tool →</a>
+      <a class="card-link-secondary" href="https://github.com/S-ABDUL-AI/causal-inference-incrementality-engine" target="_blank">GitHub →</a>
+    </div>
+
+    <!-- Card M3 -->
+    <div class="tool-card">
+      <div class="card-number">M3</div>
+      <div class="card-tags">Price Elasticity · CLV · Monte Carlo · Market Expansion · Dynamic Pricing</div>
+      <h3 class="card-title">Marketplace Economics & Supply-Demand Optimization Engine</h3>
+      <p class="card-description">
+        Strategic decision-support platform answering the $50M question: should
+        Airbnb invest in more hosts or more guests? Six-tab economics engine covering
+        supply-demand health monitoring, log-log price elasticity and revenue
+        optimisation, CLV and cohort retention analysis, multi-market expansion
+        ROI scoring, 10,000-scenario Monte Carlo forecasting, and auto-generated
+        executive recommendations.
+      </p>
+      <p class="card-audience">For: Marketplace economists · Strategy leads · Platform analytics directors</p>
+      <a class="card-link" href="https://marketplace-economics-engine.streamlit.app" target="_blank">Open Tool →</a>
+      <a class="card-link-secondary" href="https://github.com/S-ABDUL-AI/marketplace-economics-engine" target="_blank">GitHub →</a>
+    </div>
+
+  </section>
+  <!-- END MARKETPLACE SECTION -->
+
   <hr class="hr"/>
 
   <!-- ADDITIONAL TOOLS -->
@@ -853,9 +1026,10 @@
       I have spent 14 years building frameworks for exactly that situation —
       across social protection and public health programmes in West Africa,
       safety net benefits delivery in the United States, global health
-      funding decisions affecting millions of underserved people, and energy
+      funding decisions affecting millions of underserved people, energy
       infrastructure analytics for electric utility planning and regulatory
-      decision-making. My current research examines how AI-assisted decision
+      decision-making, and marketplace analytics applying causal inference
+      and economic modelling to two-sided platform strategy problems. My current research examines how AI-assisted decision
       systems create representation failures that exclude the most vulnerable
       populations from public services — grounded in direct field experience
       enrolling 1,250 women into Ghana's National Health Insurance Authority
@@ -887,16 +1061,12 @@
       U.S. Permanent Resident — Fully Work-Authorized
     </div>
     <div class="footer-links">
-      <a href="https://www.linkedin.com/in/abdul-hamid-sherriff-08583354/"
-         target="_blank" class="footer-link">LinkedIn</a>
-      <a href="https://github.com/S-ABDUL-AI"
-         target="_blank" class="footer-link">GitHub</a>
-      <a href="https://energy-portfolio.streamlit.app"
-         target="_blank" class="footer-link">Energy Portfolio</a>
-      <a href="https://share.streamlit.io/user/s-abdul-ai"
-         target="_blank" class="footer-link">All Apps</a>
-      <a href="mailto:sherriffhamid001@gmail.com"
-         class="footer-link">Email</a>
+      <a href="https://www.linkedin.com/in/abdul-hamid-sherriff-08583354/" class="footer-link">LinkedIn</a>
+      <a href="https://github.com/S-ABDUL-AI" class="footer-link">GitHub</a>
+      <a href="https://energy-portfolio.streamlit.app" class="footer-link">Energy Portfolio</a>
+      <a href="https://marketplace-analytics-portfolio.streamlit.app" class="footer-link">Marketplace Portfolio</a>
+      <a href="https://share.streamlit.io/user/s-abdul-ai" class="footer-link">All Apps</a>
+      <a href="mailto:sherriffhamid001@gmail.com" class="footer-link">Email</a>
     </div>
   </footer>
 
