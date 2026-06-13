@@ -22,9 +22,9 @@
   <meta name="twitter:image"       content="https://raw.githubusercontent.com/S-ABDUL-AI/AI.github.io/main/cover.png"/>
 
   <!-- ── FONTS ─────────────────────────────────────────────── -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -51,14 +51,44 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Lato', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.7;
+      color: #1A1A1A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       background: var(--off-white);
-      color: var(--body);
-      line-height: 1.6;
       overflow-x: hidden;
     }
 
-    a { text-decoration: none; color: inherit; }
+    h1, h2, h3, h4, h5, h6 {
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    p {
+      text-rendering: optimizeSpeed;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.95rem;
+      line-height: 1.72;
+    }
+
+    a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 0.88em;
+      background: #f0f4f8;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -126,36 +156,40 @@
     }
 
     .hero-eyebrow {
-      color: var(--gold);
-      font-size: 10px;
+      font-family: 'Inter', sans-serif;
       font-weight: 700;
-      letter-spacing: 3.5px;
+      font-size: 0.70rem;
+      letter-spacing: 0.10em;
       text-transform: uppercase;
+      color: var(--gold);
       margin-bottom: 18px;
     }
 
     .hero-name {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'DM Serif Display', Georgia, serif;
       font-size: clamp(36px, 5vw, 58px);
-      font-weight: 900;
+      font-weight: 400;
+      letter-spacing: -0.5px;
       color: var(--white);
       line-height: 1.05;
       margin-bottom: 10px;
     }
 
     .hero-title {
-      font-size: 16px;
+      font-family: 'Inter', sans-serif;
       font-weight: 300;
-      color: var(--gold-lt);
-      letter-spacing: 0.5px;
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+      color: #90CAF9;
       margin-bottom: 24px;
     }
 
     .hero-bio {
-      font-size: 14.5px;
-      font-weight: 300;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
       color: #CADCFC;
-      line-height: 1.75;
+      line-height: 1.72;
       max-width: 660px;
       margin-bottom: 32px;
     }
@@ -170,9 +204,10 @@
       background: rgba(201,168,76,0.12);
       border: 1px solid rgba(201,168,76,0.30);
       color: var(--gold-lt);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.82rem;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
       padding: 5px 13px;
       border-radius: 2px;
@@ -188,18 +223,20 @@
     }
 
     .section-eye {
-      color: var(--muted);
-      font-size: 10px;
+      font-family: 'Inter', sans-serif;
       font-weight: 700;
-      letter-spacing: 2.5px;
+      font-size: 0.70rem;
+      letter-spacing: 0.10em;
       text-transform: uppercase;
+      color: #1F3864;
       margin-bottom: 6px;
     }
 
     .section-title {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'DM Serif Display', Georgia, serif;
       font-size: clamp(22px, 3vw, 30px);
-      font-weight: 700;
+      font-weight: 400;
+      letter-spacing: -0.3px;
       color: var(--ink);
       margin-bottom: 8px;
       line-height: 1.2;
@@ -208,10 +245,12 @@
     .section-title-light { color: var(--white); }
 
     .section-sub {
-      font-size: 13.5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
       color: var(--muted);
       max-width: 640px;
-      line-height: 1.65;
+      line-height: 1.72;
       margin-bottom: 40px;
     }
 
@@ -242,9 +281,10 @@
     }
 
     .card-number {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'DM Serif Display', Georgia, serif;
       font-size: 38px;
-      font-weight: 700;
+      font-weight: 400;
+      letter-spacing: -0.3px;
       color: var(--gold);
       opacity: 0.5;
       line-height: 1;
@@ -253,9 +293,10 @@
 
     .card-tag {
       display: inline-block;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       padding: 3px 9px;
       border-radius: 2px;
@@ -264,25 +305,29 @@
     }
 
     .card-title {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 17px;
-      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.02rem;
+      letter-spacing: -0.1px;
       color: var(--ink);
       line-height: 1.3;
       margin-bottom: 10px;
     }
 
     .card-desc {
-      font-size: 12.5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
       color: var(--muted);
-      line-height: 1.65;
+      line-height: 1.72;
       margin-bottom: 14px;
       flex: 1;
     }
 
     .card-users {
-      font-size: 11px;
-      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
       color: var(--body);
       margin-bottom: 18px;
       letter-spacing: 0.3px;
@@ -292,9 +337,10 @@
       display: inline-block;
       background: var(--navy);
       color: var(--white) !important;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
       text-transform: uppercase;
       padding: 10px 18px;
       border-radius: 2px;
@@ -318,9 +364,10 @@
       display: inline-block;
       background: transparent;
       color: var(--navy) !important;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
       text-transform: uppercase;
       padding: 8px 16px;
       border-radius: 2px;
@@ -362,18 +409,27 @@
     .tool-row:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.07); }
 
     .tool-name {
-      font-size: 14px;
-      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.02rem;
+      letter-spacing: -0.1px;
       color: var(--ink);
       margin-bottom: 3px;
     }
 
-    .tool-desc { font-size: 12px; color: var(--muted); }
+    .tool-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      line-height: 1.72;
+      color: var(--muted);
+    }
 
     .tool-link {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1.2px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
       text-transform: uppercase;
       color: var(--navy) !important;
       border-bottom: 2px solid var(--gold);
@@ -391,12 +447,18 @@
     }
 
     .about-body {
-      font-size: 14px;
-      font-weight: 300;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
       color: #CADCFC;
-      line-height: 1.8;
+      line-height: 1.72;
       max-width: 760px;
       margin-bottom: 28px;
+    }
+
+    .about-body strong {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
     }
 
     .about-body em {
@@ -439,9 +501,10 @@
     .article-label {
       background: var(--navy);
       color: var(--white);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       padding: 4px 10px;
       border-radius: 2px;
@@ -450,25 +513,29 @@
     }
 
     .article-title {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 18px;
-      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.02rem;
+      letter-spacing: -0.1px;
       color: var(--ink);
       margin-bottom: 8px;
       line-height: 1.3;
     }
 
     .article-desc {
-      font-size: 13px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
       color: var(--muted);
-      line-height: 1.65;
+      line-height: 1.72;
       margin-bottom: 14px;
     }
 
     .article-link {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1.2px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
       text-transform: uppercase;
       color: var(--navy) !important;
       border-bottom: 2px solid var(--gold);
@@ -487,9 +554,16 @@
     }
 
     .footer-left {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.83rem;
       color: var(--muted);
-      font-size: 12px;
       line-height: 1.6;
+    }
+
+    .footer-left strong {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.1rem;
     }
 
     .footer-links {
@@ -500,8 +574,9 @@
 
     .footer-link {
       color: var(--gold-lt) !important;
-      font-size: 11px;
-      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.83rem;
       letter-spacing: 1px;
       text-transform: uppercase;
       border-bottom: 1px solid rgba(201,168,76,0.3);
@@ -514,19 +589,22 @@
     }
 
     .section-label {
-      color: var(--gold);
-      font-size: 10px;
+      font-family: 'Inter', sans-serif;
       font-weight: 700;
-      letter-spacing: 3.5px;
+      font-size: 0.70rem;
+      letter-spacing: 0.10em;
       text-transform: uppercase;
+      color: #1F3864;
       margin-bottom: 8px;
     }
 
     .section-subtitle {
-      font-size: 13.5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
       color: var(--muted);
       max-width: 640px;
-      line-height: 1.65;
+      line-height: 1.72;
       margin-bottom: 40px;
     }
 
@@ -553,24 +631,28 @@
     }
 
     .card-tags {
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--muted);
       margin-bottom: 12px;
     }
 
     .card-description {
-      font-size: 12.5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
       color: var(--muted);
-      line-height: 1.65;
+      line-height: 1.72;
       margin-bottom: 14px;
     }
 
     .card-audience {
-      font-size: 11px;
-      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
       color: var(--body);
       margin-bottom: 18px;
       letter-spacing: 0.3px;
@@ -580,9 +662,10 @@
       display: inline-block;
       background: var(--navy);
       color: var(--white) !important;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
       text-transform: uppercase;
       padding: 10px 18px;
       border-radius: 2px;
@@ -598,9 +681,10 @@
       display: inline-block;
       background: transparent;
       color: var(--navy) !important;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
       text-transform: uppercase;
       padding: 8px 16px;
       border-radius: 2px;
@@ -610,6 +694,17 @@
     .card-link-secondary:hover {
       background: var(--navy);
       color: var(--white) !important;
+    }
+
+    .method-grid > div > div:first-child {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+
+    .method-grid > div > div:last-child {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.72;
     }
 
     @media (max-width: 768px) {
