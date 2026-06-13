@@ -181,7 +181,18 @@
       font-size: 1.05rem;
       letter-spacing: 0.04em;
       color: #90CAF9;
-      margin-bottom: 24px;
+      line-height: 1.55;
+      max-width: 900px;
+      margin-bottom: 28px;
+    }
+
+    .hero-bio-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1.125rem;
+      max-width: 780px;
+      width: 100%;
+      margin-bottom: 28px;
     }
 
     .hero-bio {
@@ -190,14 +201,15 @@
       font-weight: 400;
       color: #CADCFC;
       line-height: 1.72;
-      max-width: 660px;
-      margin-bottom: 32px;
+      margin: 0;
+      text-wrap: pretty;
     }
 
     .hero-creds {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
+      max-width: 900px;
     }
 
     .cred-pill {
@@ -734,7 +746,8 @@
       Applied Economist &nbsp;·&nbsp; Data Scientist &nbsp;·&nbsp; AI &amp; Public Policy Researcher &nbsp;·&nbsp; Causal Inference Specialist &nbsp;·&nbsp; Decision Intelligence Builder
     </p>
 
-    <p class="hero-bio fade-up delay-3">
+    <div class="hero-bio-wrap fade-up delay-3">
+    <p class="hero-bio">
       I build decision intelligence systems that help institutions make better decisions
       when evidence is incomplete, resources are constrained, and uncertainty is
       unavoidable — combining causal inference, forecasting, optimization,
@@ -742,7 +755,7 @@
       social protection and public health, energy infrastructure, digital marketplace
       economics, and AI governance.
     </p>
-    <p class="hero-bio fade-up delay-3">
+    <p class="hero-bio">
       My research examines how AI systems deployed in government settings create
       representation failures — how systematic missingness and distribution shift in
       administrative training data cause public-sector AI to fail the populations most
@@ -754,7 +767,7 @@
       AI-assisted eligibility screening, submitted to Anthropic's Economics Fellows
       Program.
     </p>
-    <p class="hero-bio fade-up delay-3">
+    <p class="hero-bio">
       As Founder and Executive Director of Poverty 360, I have led programs reaching
       58,000+ direct and indirect beneficiaries across five countries, directing
       USAID, UKAID, UNDP, and USADF-funded initiatives covering 25,000+ evaluated
@@ -762,6 +775,7 @@
       Economics, Resource Economics, Health Economics, and Econometrics — providing
       the disciplinary depth behind the analytical methods I apply in practice.
     </p>
+    </div>
 
     <div class="hero-creds fade-up delay-4">
       <span class="cred-pill">EB-1A Extraordinary Ability</span>
