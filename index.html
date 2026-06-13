@@ -182,7 +182,7 @@
       letter-spacing: 0.04em;
       color: #90CAF9;
       line-height: 1.55;
-      max-width: 900px;
+      max-width: 100%;
       margin-bottom: 28px;
     }
 
@@ -190,8 +190,8 @@
       display: flex;
       flex-direction: column;
       gap: 1.125rem;
-      max-width: 780px;
       width: 100%;
+      max-width: 100%;
       margin-bottom: 28px;
     }
 
@@ -202,14 +202,18 @@
       color: #CADCFC;
       line-height: 1.72;
       margin: 0;
+      text-align: justify;
+      text-align-last: left;
       text-wrap: pretty;
+      hyphens: auto;
     }
 
     .hero-creds {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      max-width: 900px;
+      max-width: 100%;
+      width: 100%;
     }
 
     .cred-pill {
@@ -730,6 +734,7 @@
       .hero, .section, .footer { padding-left: 24px; padding-right: 24px; }
       .hr { margin: 0 24px; }
       .hero { padding-top: 48px; padding-bottom: 40px; }
+      .hero-bio { text-align: left; }
       .cards-grid { grid-template-columns: 1fr; }
       .cards-grid-3 { grid-template-columns: 1fr; }
       .article-card { flex-direction: column; gap: 12px; }
