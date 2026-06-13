@@ -274,6 +274,10 @@
       gap: 20px;
     }
 
+    .cards-grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .card {
       background: var(--white);
       border: 1px solid var(--rule);
@@ -283,6 +287,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       display: flex;
       flex-direction: column;
+      min-width: 0;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       position: relative;
     }
@@ -304,7 +309,8 @@
     }
 
     .card-tag {
-      display: inline-block;
+      display: block;
+      width: 100%;
       font-family: 'Inter', sans-serif;
       font-weight: 600;
       font-size: 0.72rem;
@@ -314,6 +320,7 @@
       border-radius: 2px;
       margin-bottom: 12px;
       color: var(--white);
+      line-height: 1.45;
     }
 
     .card-title {
@@ -724,6 +731,7 @@
       .hr { margin: 0 24px; }
       .hero { padding-top: 48px; padding-bottom: 40px; }
       .cards-grid { grid-template-columns: 1fr; }
+      .cards-grid-3 { grid-template-columns: 1fr; }
       .article-card { flex-direction: column; gap: 12px; }
       .footer { flex-direction: column; align-items: flex-start; }
     }
@@ -998,7 +1006,7 @@
       <a href="https://marketplace-analytics-portfolio.streamlit.app" target="_blank">View full marketplace portfolio →</a>
     </p>
 
-    <div class="cards-grid">
+    <div class="cards-grid cards-grid-3">
 
       <div class="card fade-up delay-1" style="border-top-color: var(--navy);">
         <div class="card-number">M1</div>
