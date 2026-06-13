@@ -178,12 +178,13 @@
     .hero-title {
       font-family: 'Inter', sans-serif;
       font-weight: 300;
-      font-size: 1.05rem;
-      letter-spacing: 0.04em;
+      font-size: clamp(0.72rem, 0.55rem + 0.85vw, 1.05rem);
+      letter-spacing: 0.03em;
       color: #90CAF9;
       line-height: 1.55;
       max-width: 100%;
       margin-bottom: 28px;
+      white-space: nowrap;
     }
 
     .hero-bio-wrap {
