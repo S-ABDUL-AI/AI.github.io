@@ -118,47 +118,40 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: stretch;
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      width: 100%;
     }
 
     .hero::before {
       content: '';
       position: absolute;
       top: -100px; right: -100px;
-      width: 360px; height: 360px;
+      width: 500px; height: 500px;
       background: var(--gold);
-      opacity: 0.03;
+      opacity: 0.04;
       border-radius: 50%;
       pointer-events: none;
     }
     .hero::after {
       content: '';
       position: absolute;
-      bottom: -60px; right: 80px;
-      width: 200px; height: 200px;
+      bottom: -60px; right: 120px;
+      width: 280px; height: 280px;
       background: var(--gold);
-      opacity: 0.04;
+      opacity: 0.05;
       border-radius: 50%;
       pointer-events: none;
     }
     .hero-geo {
       position: absolute;
       top: 0; right: 0;
-      width: 140px; height: 140px;
-      background: rgba(201,168,76,0.05);
+      width: 220px; height: 220px;
+      background: rgba(201,168,76,0.07);
       clip-path: polygon(100% 0, 0 0, 100% 100%);
     }
     .hero-geo-2 {
       position: absolute;
       top: 0; right: 0;
-      width: 90px; height: 90px;
-      background: rgba(201,168,76,0.06);
+      width: 150px; height: 150px;
+      background: rgba(201,168,76,0.10);
       clip-path: polygon(100% 0, 0 0, 100% 100%);
     }
 
@@ -182,22 +175,38 @@
       margin-bottom: 10px;
     }
 
-    .hero-title {
+    .hero-title-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 0.5rem;
       font-family: 'Inter', sans-serif;
       font-weight: 300;
-      font-size: clamp(0.78rem, 0.62rem + 0.55vw, 1.02rem);
+      font-size: clamp(0.68rem, 0.45rem + 0.75vw, 0.98rem);
       letter-spacing: 0.02em;
       color: #90CAF9;
       line-height: 1.4;
-      width: 100%;
       margin-bottom: 28px;
+    }
+
+    .hero-title-row span:not(.hero-dot) {
+      flex: 1 1 0;
+      text-align: center;
       white-space: nowrap;
+    }
+
+    .hero-dot {
+      flex: 0 0 auto;
+      opacity: 0.65;
+      font-weight: 400;
     }
 
     .hero-bio-wrap {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem 2rem;
+      gap: 1.75rem 2rem;
       width: 100%;
       margin-bottom: 28px;
     }
@@ -217,8 +226,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      max-width: 100%;
       width: 100%;
+      justify-content: flex-start;
     }
 
     .cred-pill {
@@ -735,22 +744,22 @@
       line-height: 1.72;
     }
 
-    @media (max-width: 992px) {
-      .hero-bio-wrap {
-        grid-template-columns: 1fr;
-        gap: 1.125rem;
-      }
-
-      .hero-title {
-        white-space: normal;
-        line-height: 1.55;
-      }
-    }
-
     @media (max-width: 768px) {
       .hero, .section, .footer { padding-left: 24px; padding-right: 24px; }
       .hr { margin: 0 24px; }
       .hero { padding-top: 48px; padding-bottom: 40px; }
+      .hero-title-row {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.35rem 0.6rem;
+      }
+      .hero-title-row span:not(.hero-dot) {
+        flex: 0 1 auto;
+        text-align: left;
+        white-space: normal;
+      }
+      .hero-dot { display: none; }
+      .hero-bio-wrap { grid-template-columns: 1fr; gap: 1.125rem; }
       .cards-grid { grid-template-columns: 1fr; }
       .cards-grid-3 { grid-template-columns: 1fr; }
       .article-card { flex-direction: column; gap: 12px; }
@@ -766,15 +775,22 @@
     <div class="hero-geo"></div>
     <div class="hero-geo-2"></div>
 
-    <div class="hero-inner">
     <p class="hero-eyebrow fade-in">Portfolio · Applied Economics, AI Policy Research &amp; Decision Science</p>
 
     <h1 class="hero-name fade-up delay-1">Sherriff<br>Abdul-Hamid</h1>
 
     <!-- FIX 1: Title updated -->
-    <p class="hero-title fade-up delay-2">
-      Applied Economist &nbsp;·&nbsp; Data Scientist &nbsp;·&nbsp; AI &amp; Public Policy Researcher &nbsp;·&nbsp; Causal Inference Specialist &nbsp;·&nbsp; Decision Intelligence Builder
-    </p>
+    <div class="hero-title-row fade-up delay-2">
+      <span>Applied Economist</span>
+      <span class="hero-dot">·</span>
+      <span>Data Scientist</span>
+      <span class="hero-dot">·</span>
+      <span>AI &amp; Public Policy Researcher</span>
+      <span class="hero-dot">·</span>
+      <span>Causal Inference Specialist</span>
+      <span class="hero-dot">·</span>
+      <span>Decision Intelligence Builder</span>
+    </div>
 
     <div class="hero-bio-wrap fade-up delay-3">
     <p class="hero-bio">
@@ -815,7 +831,6 @@
       <span class="cred-pill">14+ Years</span>
       <span class="cred-pill">58,000+ Beneficiaries</span>
       <span class="cred-pill">USAID · UKAID · UNDP · USADF</span>
-    </div>
     </div>
   </section>
 
