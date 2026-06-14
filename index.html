@@ -1367,52 +1367,136 @@
       The analytical methods and tools applied across all four portfolios.
     </p>
 
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px; margin-top:20px;">
+    <!-- METHODS CATEGORIES -->
+    <div style="margin-top:24px;">
 
-      <div>
-        <div style="font-weight:700; color:#1F3864; font-size:0.95rem; margin-bottom:10px;
-             text-transform:uppercase; letter-spacing:0.05em;">
-          Methods
+      <div style="font-weight:700; color:#1F3864; font-size:0.95rem; margin-bottom:10px;
+           text-transform:uppercase; letter-spacing:0.05em;">
+        Methods
+      </div>
+
+      <div style="margin-bottom:16px;">
+        <div style="font-weight:600; color:#1F3864; font-size:0.82rem; margin-bottom:8px;">
+          Causal Inference & Policy Evaluation
         </div>
         <div style="display:flex; flex-wrap:wrap; gap:8px;">
           <span class="method-pill">Difference-in-Differences</span>
           <span class="method-pill">Synthetic Control</span>
           <span class="method-pill">Propensity Score Matching</span>
           <span class="method-pill">Instrumental Variables</span>
+          <span class="method-pill">Regression Discontinuity (RDD)</span>
           <span class="method-pill">Event Study</span>
-          <span class="method-pill">Bayesian Inference</span>
-          <span class="method-pill">A/B Testing</span>
-          <span class="method-pill">CUPED</span>
-          <span class="method-pill">Time Series Forecasting (SARIMA)</span>
-          <span class="method-pill">VAR / VECM</span>
-          <span class="method-pill">Monte Carlo Simulation</span>
-          <span class="method-pill">Portfolio Optimization</span>
-          <span class="method-pill">Cost-Effectiveness Analysis</span>
-          <span class="method-pill">Machine Learning (Random Forest, Gradient Boosting)</span>
+          <span class="method-pill">Quasi-Experimental Design</span>
         </div>
       </div>
 
-      <div>
-        <div style="font-weight:700; color:#388e3c; font-size:0.95rem; margin-bottom:10px;
-             text-transform:uppercase; letter-spacing:0.05em;">
-          Tools
+      <div style="margin-bottom:16px;">
+        <div style="font-weight:600; color:#1F3864; font-size:0.82rem; margin-bottom:8px;">
+          Experimentation & Product Analytics
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span class="method-pill">A/B Testing</span>
+          <span class="method-pill">CUPED</span>
+          <span class="method-pill">Sequential Testing (Alpha Spending)</span>
+          <span class="method-pill">Bayesian Inference</span>
+          <span class="method-pill">Network Effects Analysis (SUTVA)</span>
+          <span class="method-pill">Uplift Modeling</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom:16px;">
+        <div style="font-weight:600; color:#1F3864; font-size:0.82rem; margin-bottom:8px;">
+          Forecasting & Optimization
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span class="method-pill">Time Series Forecasting (SARIMA)</span>
+          <span class="method-pill">ARIMA / Prophet</span>
+          <span class="method-pill">VAR / VECM</span>
+          <span class="method-pill">Monte Carlo Simulation</span>
+          <span class="method-pill">Portfolio Optimization</span>
+          <span class="method-pill">Linear Programming</span>
+          <span class="method-pill">Machine Learning (Random Forest, Gradient Boosting)</span>
+          <span class="method-pill">Survival Analysis</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom:16px;">
+        <div style="font-weight:600; color:#1F3864; font-size:0.82rem; margin-bottom:8px;">
+          Economics & Decision Science
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span class="method-pill">Cost-Effectiveness Analysis</span>
+          <span class="method-pill">Price Elasticity Modeling</span>
+          <span class="method-pill">Customer Lifetime Value Modeling</span>
+          <span class="method-pill">Expected Value / Risk-Based Decision Making</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom:16px;">
+        <div style="font-weight:600; color:#1F3864; font-size:0.82rem; margin-bottom:8px;">
+          AI Governance & Evaluation
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span class="method-pill">Distribution Shift Detection</span>
+          <span class="method-pill">Representation Bias Auditing</span>
+          <span class="method-pill">Algorithmic Exclusion Analysis</span>
+          <span class="method-pill">ETL Pipeline Automation</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TOOLS CATEGORIES -->
+    <div style="margin-top:28px;">
+
+      <div style="font-weight:700; color:#388e3c; font-size:0.95rem; margin-bottom:10px;
+           text-transform:uppercase; letter-spacing:0.05em;">
+        Tools
+      </div>
+
+      <div style="margin-bottom:16px;">
+        <div style="font-weight:600; color:#388e3c; font-size:0.82rem; margin-bottom:8px;">
+          Languages & Statistical Computing
         </div>
         <div style="display:flex; flex-wrap:wrap; gap:8px;">
           <span class="method-pill method-pill-green">Python</span>
           <span class="method-pill method-pill-green">SQL</span>
           <span class="method-pill method-pill-green">R</span>
           <span class="method-pill method-pill-green">Stata</span>
-          <span class="method-pill method-pill-green">Streamlit</span>
-          <span class="method-pill method-pill-green">Tableau</span>
-          <span class="method-pill method-pill-green">Power BI</span>
-          <span class="method-pill method-pill-green">AWS</span>
-          <span class="method-pill method-pill-green">GitHub Actions</span>
-          <span class="method-pill method-pill-green">Plotly</span>
           <span class="method-pill method-pill-green">statsmodels / scikit-learn</span>
         </div>
       </div>
 
+      <div style="margin-bottom:16px;">
+        <div style="font-weight:600; color:#388e3c; font-size:0.82rem; margin-bottom:8px;">
+          Visualization & BI
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span class="method-pill method-pill-green">Plotly</span>
+          <span class="method-pill method-pill-green">Tableau</span>
+          <span class="method-pill method-pill-green">Power BI</span>
+          <span class="method-pill method-pill-green">Streamlit</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom:16px;">
+        <div style="font-weight:600; color:#388e3c; font-size:0.82rem; margin-bottom:8px;">
+          Cloud, AI & Infrastructure
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span class="method-pill method-pill-green">AWS</span>
+          <span class="method-pill method-pill-green">Google Cloud</span>
+          <span class="method-pill method-pill-green">Azure</span>
+          <span class="method-pill method-pill-green">Databricks</span>
+          <span class="method-pill method-pill-green">Snowflake</span>
+          <span class="method-pill method-pill-green">Claude API / LLM Integration</span>
+          <span class="method-pill method-pill-green">GitHub Actions</span>
+          <span class="method-pill method-pill-green">Git</span>
+        </div>
+      </div>
+
     </div>
+
   </section>
   <!-- END METHODS AND STACK SECTION -->
 
