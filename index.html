@@ -780,6 +780,13 @@
       border-color: #C8E6C9;
     }
 
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 14px;
+    }
+
     @media (max-width: 768px) {
       .hero, .section, .footer { padding-left: 24px; padding-right: 24px; }
       .hr { margin: 0 24px; }
@@ -798,6 +805,7 @@
       .hero-bio-wrap { grid-template-columns: 1fr; gap: 1.125rem; }
       .cards-grid { grid-template-columns: 1fr; }
       .cards-grid-3 { grid-template-columns: 1fr; }
+      .stack-grid { grid-template-columns: 1fr; }
       .article-card { flex-direction: column; gap: 12px; }
       .footer { flex-direction: column; align-items: flex-start; }
     }
@@ -1377,7 +1385,7 @@
         Methods
       </div>
 
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:24px; margin-top:14px;">
+      <div class="stack-grid">
 
       <div>
         <div style="font-weight:600; color:#1F3864; font-size:0.82rem; margin-bottom:8px;">
@@ -1472,7 +1480,7 @@
         Tools
       </div>
 
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:24px; margin-top:14px;">
+      <div class="stack-grid">
 
       <div>
         <div style="font-weight:600; color:#388e3c; font-size:0.82rem; margin-bottom:8px;">
