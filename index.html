@@ -747,6 +747,37 @@
       line-height: 1.72;
     }
 
+    .research-pill {
+      display: inline-block;
+      background: #E3F2FD;
+      color: #1565C0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.80rem;
+      letter-spacing: 0.02em;
+      padding: 7px 16px;
+      border-radius: 20px;
+      border: 1px solid #BBDEFB;
+    }
+
+    .method-pill {
+      display: inline-block;
+      background: #f0f4f8;
+      color: #1F3864;
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-weight: 500;
+      font-size: 0.78rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid #d9e2ec;
+    }
+
+    .method-pill-green {
+      background: #E8F5E9;
+      color: #2e7d32;
+      border-color: #C8E6C9;
+    }
+
     @media (max-width: 768px) {
       .hero, .section, .footer { padding-left: 24px; padding-right: 24px; }
       .hr { margin: 0 24px; }
@@ -834,6 +865,22 @@
       <span class="cred-pill">USAID · UKAID · UNDP · USADF</span>
     </div>
   </section>
+
+  <!-- CORE RESEARCH AREAS SECTION -->
+  <section class="section" style="padding-top: 8px;">
+    <div class="section-label">Core Research Areas</div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;">
+      <span class="research-pill">Public-Sector AI</span>
+      <span class="research-pill">AI Governance & Responsible AI</span>
+      <span class="research-pill">Causal Inference</span>
+      <span class="research-pill">Decision Intelligence Systems</span>
+      <span class="research-pill">Cost-Effectiveness Analysis</span>
+      <span class="research-pill">Marketplace Economics</span>
+      <span class="research-pill">Energy Economics</span>
+      <span class="research-pill">Social Protection Systems</span>
+    </div>
+  </section>
+  <!-- END CORE RESEARCH AREAS SECTION -->
 
   <!-- FEATURED TOOLS — FIX 3: Connecting sentence added -->
   <section class="section">
@@ -1158,6 +1205,62 @@
       <a class="card-link" href="https://www.linkedin.com/pulse/question-nobody-asks-directly-why-silence-costing-lives-sherriff-woesc/" target="_blank">Read Article →</a>
     </div>
 
+    <!-- RESEARCH AGENDA SUBSECTION -->
+    <div style="margin-top:32px; background:white; border-radius:12px; padding:28px 30px;
+         box-shadow:0 2px 8px rgba(0,0,0,0.07); border-left:5px solid #1F3864;">
+      <div style="font-weight:700; color:#1F3864; font-size:1.05rem; margin-bottom:14px;">
+        Research Agenda
+      </div>
+      <p style="font-size:0.90rem; color:#555; line-height:1.7; margin-bottom:18px;">
+        Four connected research themes extending from the work in this portfolio:
+      </p>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:18px;">
+
+        <div>
+          <div style="font-weight:600; color:#1F3864; font-size:0.92rem; margin-bottom:6px;">
+            1. AI and Social Protection
+          </div>
+          <div style="font-size:0.86rem; color:#555; line-height:1.6;">
+            How AI-assisted eligibility and targeting systems affect access to
+            healthcare, benefits, and social protection programmes.
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:600; color:#1F3864; font-size:0.92rem; margin-bottom:6px;">
+            2. Representation Failures in Administrative Data
+          </div>
+          <div style="font-size:0.86rem; color:#555; line-height:1.6;">
+            How systematic missingness and selection bias in administrative
+            records propagate into distribution shift in deployed AI systems.
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:600; color:#1F3864; font-size:0.92rem; margin-bottom:6px;">
+            3. Decision Intelligence for Public Institutions
+          </div>
+          <div style="font-size:0.86rem; color:#555; line-height:1.6;">
+            Frameworks combining causal inference, optimization, and forecasting
+            to support institutional decisions under incomplete evidence.
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:600; color:#1F3864; font-size:0.92rem; margin-bottom:6px;">
+            4. Cost-Effectiveness and Resource Allocation
+          </div>
+          <div style="font-size:0.86rem; color:#555; line-height:1.6;">
+            Applying welfare economics and expected-value analysis to resource
+            allocation decisions across health, energy, and social protection.
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- END RESEARCH AGENDA SUBSECTION -->
+
   </section>
   <!-- END AI GOVERNANCE SECTION -->
 
@@ -1255,6 +1358,63 @@
 
   </section>
   <!-- END CAUSAL INFERENCE SECTION -->
+
+  <!-- METHODS AND STACK SECTION -->
+  <section class="section">
+    <div class="section-label">Technical Reference</div>
+    <h2 class="section-title">Methods & Technical Stack</h2>
+    <p class="section-subtitle">
+      The analytical methods and tools applied across all four portfolios.
+    </p>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px; margin-top:20px;">
+
+      <div>
+        <div style="font-weight:700; color:#1F3864; font-size:0.95rem; margin-bottom:10px;
+             text-transform:uppercase; letter-spacing:0.05em;">
+          Methods
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span class="method-pill">Difference-in-Differences</span>
+          <span class="method-pill">Synthetic Control</span>
+          <span class="method-pill">Propensity Score Matching</span>
+          <span class="method-pill">Instrumental Variables</span>
+          <span class="method-pill">Event Study</span>
+          <span class="method-pill">Bayesian Inference</span>
+          <span class="method-pill">A/B Testing</span>
+          <span class="method-pill">CUPED</span>
+          <span class="method-pill">Time Series Forecasting (SARIMA)</span>
+          <span class="method-pill">VAR / VECM</span>
+          <span class="method-pill">Monte Carlo Simulation</span>
+          <span class="method-pill">Portfolio Optimization</span>
+          <span class="method-pill">Cost-Effectiveness Analysis</span>
+          <span class="method-pill">Machine Learning (Random Forest, Gradient Boosting)</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-weight:700; color:#388e3c; font-size:0.95rem; margin-bottom:10px;
+             text-transform:uppercase; letter-spacing:0.05em;">
+          Tools
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span class="method-pill method-pill-green">Python</span>
+          <span class="method-pill method-pill-green">SQL</span>
+          <span class="method-pill method-pill-green">R</span>
+          <span class="method-pill method-pill-green">Stata</span>
+          <span class="method-pill method-pill-green">Streamlit</span>
+          <span class="method-pill method-pill-green">Tableau</span>
+          <span class="method-pill method-pill-green">Power BI</span>
+          <span class="method-pill method-pill-green">AWS</span>
+          <span class="method-pill method-pill-green">GitHub Actions</span>
+          <span class="method-pill method-pill-green">Plotly</span>
+          <span class="method-pill method-pill-green">statsmodels / scikit-learn</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- END METHODS AND STACK SECTION -->
 
   <hr class="hr"/>
 
@@ -1392,8 +1552,6 @@
       <span class="award-pill">Mandela Washington Fellow — Top 0.3%, U.S. Dept of State</span>
       <span class="award-pill">Harvard Business School — Senior Executive Program</span>
       <span class="award-pill">USADF + Citibank Grant — Top 0.1% globally</span>
-      <span class="award-pill">Invited — VP Kamala Harris VVIP Event, U.S. Embassy Ghana</span>
-      <span class="award-pill">Invited — UN Food Security Program, Ambassador Linda Thomas-Greenfield</span>
     </div>
   </section>
 
