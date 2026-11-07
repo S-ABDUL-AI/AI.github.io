@@ -95,4 +95,1665 @@
     }
 
     @keyframes fadeUp {
-      from { opacity: 
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    .fade-up  { animation: fadeUp  0.7s ease both; }
+    .fade-in  { animation: fadeIn  0.6s ease both; }
+    .delay-1  { animation-delay: 0.1s; }
+    .delay-2  { animation-delay: 0.2s; }
+    .delay-3  { animation-delay: 0.3s; }
+    .delay-4  { animation-delay: 0.4s; }
+    .delay-5  { animation-delay: 0.5s; }
+    .delay-6  { animation-delay: 0.6s; }
+
+    .hero {
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 50%, var(--navy-mid) 100%);
+      border-left: 8px solid var(--gold);
+      padding: 72px 80px 64px;
+      position: relative;
+      overflow: hidden;
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 500px; height: 500px;
+      background: var(--gold);
+      opacity: 0.04;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; right: 120px;
+      width: 280px; height: 280px;
+      background: var(--gold);
+      opacity: 0.05;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-geo {
+      position: absolute;
+      top: 0; right: 0;
+      width: 220px; height: 220px;
+      background: rgba(201,168,76,0.07);
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+    .hero-geo-2 {
+      position: absolute;
+      top: 0; right: 0;
+      width: 150px; height: 150px;
+      background: rgba(201,168,76,0.10);
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+
+    .hero-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.70rem;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .hero-name {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 10px;
+    }
+
+    .hero-title-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: clamp(0.68rem, 0.45rem + 0.75vw, 0.98rem);
+      letter-spacing: 0.02em;
+      color: #90CAF9;
+      line-height: 1.4;
+      margin-bottom: 28px;
+    }
+
+    .hero-title-row span:not(.hero-dot) {
+      flex: 1 1 0;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .hero-dot {
+      flex: 0 0 auto;
+      opacity: 0.65;
+      font-weight: 400;
+    }
+
+    .hero-bio-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.75rem 2rem;
+      width: 100%;
+      margin-bottom: 28px;
+    }
+
+    .hero-bio {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 400;
+      color: #CADCFC;
+      line-height: 1.68;
+      margin: 0;
+      text-align: left;
+      text-wrap: pretty;
+    }
+
+    .hero-creds {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    .cred-pill {
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.30);
+      color: var(--gold-lt);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.82rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 5px 13px;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .cred-pill:hover { background: rgba(201,168,76,0.22); }
+
+    .section { padding: 64px 80px; }
+    .section-alt { background: var(--white); }
+    .section-dark {
+      background: var(--navy);
+      border-left: 8px solid var(--gold);
+    }
+
+    .section-eye {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.70rem;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: #1F3864;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 400;
+      letter-spacing: -0.3px;
+      color: var(--ink);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .section-title-light { color: var(--white); }
+
+    .section-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--muted);
+      max-width: 640px;
+      line-height: 1.72;
+      margin-bottom: 40px;
+    }
+
+    .section-sub-light { color: #CADCFC; }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .cards-grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-top: 4px solid var(--navy);
+      border-radius: 3px;
+      padding: 26px 22px 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+    }
+
+    .card-number {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 38px;
+      font-weight: 400;
+      letter-spacing: -0.3px;
+      color: var(--gold);
+      opacity: 0.5;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .card-tag {
+      display: block;
+      width: 100%;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 2px;
+      margin-bottom: 12px;
+      color: var(--white);
+      line-height: 1.45;
+    }
+
+    .card-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.02rem;
+      letter-spacing: -0.1px;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .card-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.72;
+      margin-bottom: 14px;
+      flex: 1;
+    }
+
+    .card-users {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--body);
+      margin-bottom: 18px;
+      letter-spacing: 0.3px;
+    }
+
+    .card-btn {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white) !important;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      padding: 10px 18px;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s;
+      align-self: flex-start;
+    }
+    .card-btn:hover {
+      background: var(--gold);
+      color: var(--ink) !important;
+    }
+
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-self: flex-start;
+      margin-top: auto;
+    }
+
+    .card-btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--navy) !important;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 2px;
+      border: 2px solid var(--navy);
+      transition: background 0.2s, color 0.2s;
+    }
+    .card-btn-secondary:hover {
+      background: var(--navy);
+      color: var(--white) !important;
+    }
+
+    .section-sub a {
+      color: var(--navy);
+      font-weight: 700;
+      border-bottom: 2px solid var(--gold);
+    }
+    .section-sub a:hover { color: var(--gold); }
+
+    .hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 0 80px;
+    }
+
+    .tool-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .tool-row {
+      background: var(--off-white);
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--gold);
+      border-radius: 3px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      transition: box-shadow 0.2s;
+    }
+    .tool-row:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.07); }
+
+    .tool-name {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.02rem;
+      letter-spacing: -0.1px;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+
+    .tool-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    .tool-link {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      color: var(--navy) !important;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 2px;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .tool-link:hover { color: var(--gold) !important; }
+
+    .tool-row-links {
+      display: flex;
+      gap: 16px;
+      flex-shrink: 0;
+      align-items: center;
+    }
+
+    .about-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #CADCFC;
+      line-height: 1.72;
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .about-body strong {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+
+    .about-body em {
+      color: var(--gold-lt);
+      font-style: italic;
+    }
+
+    .awards-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .award-pill {
+      background: rgba(201,168,76,0.10);
+      border: 1px solid rgba(201,168,76,0.25);
+      color: var(--gold-lt);
+      font-size: 11px;
+      padding: 5px 12px;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .award-pill:hover { background: rgba(201,168,76,0.20); }
+
+    .article-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-left: 6px solid var(--gold);
+      border-radius: 3px;
+      padding: 24px 28px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      transition: box-shadow 0.2s;
+      margin-bottom: 16px;
+    }
+    .article-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.09); }
+
+    .article-label {
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      white-space: nowrap;
+      margin-top: 4px;
+    }
+
+    .article-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.02rem;
+      letter-spacing: -0.1px;
+      color: var(--ink);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .article-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.72;
+      margin-bottom: 14px;
+    }
+
+    .article-link {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      color: var(--navy) !important;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 2px;
+    }
+
+    .footer {
+      background: var(--navy-deep);
+      border-left: 8px solid var(--gold);
+      padding: 32px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-left {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.83rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .footer-left strong {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      color: var(--gold-lt) !important;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.83rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .footer-link:hover {
+      color: var(--gold) !important;
+      border-color: var(--gold);
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.70rem;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: #1F3864;
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--muted);
+      max-width: 640px;
+      line-height: 1.72;
+      margin-bottom: 40px;
+    }
+
+    .section-subtitle a {
+      color: var(--navy);
+      font-weight: 700;
+      border-bottom: 2px solid var(--gold);
+    }
+    .section-subtitle a:hover { color: var(--gold); }
+
+    .tool-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-top: 4px solid var(--navy);
+      border-radius: 3px;
+      padding: 26px 22px 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .tool-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+    }
+
+    .card-tags {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .card-description {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.72;
+      margin-bottom: 14px;
+    }
+
+    .card-audience {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--body);
+      margin-bottom: 18px;
+      letter-spacing: 0.3px;
+    }
+
+    .card-link {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white) !important;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      padding: 10px 18px;
+      border-radius: 2px;
+      margin-right: 8px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .card-link:hover {
+      background: var(--gold);
+      color: var(--ink) !important;
+    }
+
+    .card-link-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--navy) !important;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 2px;
+      border: 2px solid var(--navy);
+      transition: background 0.2s, color 0.2s;
+    }
+    .card-link-secondary:hover {
+      background: var(--navy);
+      color: var(--white) !important;
+    }
+
+    .method-grid > div > div:first-child {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+
+    .method-grid > div > div:last-child {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.72;
+    }
+
+    .research-pill {
+      display: inline-block;
+      background: #E3F2FD;
+      color: #1565C0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.80rem;
+      letter-spacing: 0.02em;
+      padding: 7px 16px;
+      border-radius: 20px;
+      border: 1px solid #BBDEFB;
+    }
+
+    .method-pill {
+      display: block;
+      width: fit-content;
+      background: #f0f4f8;
+      color: #1F3864;
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-weight: 500;
+      font-size: 0.78rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid #d9e2ec;
+    }
+
+    .method-pill-green {
+      background: #E8F5E9;
+      color: #2e7d32;
+      border-color: #C8E6C9;
+    }
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero, .section, .footer { padding-left: 24px; padding-right: 24px; }
+      .hr { margin: 0 24px; }
+      .hero { padding-top: 48px; padding-bottom: 40px; }
+      .hero-title-row {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.35rem 0.6rem;
+      }
+      .hero-title-row span:not(.hero-dot) {
+        flex: 0 1 auto;
+        text-align: left;
+        white-space: normal;
+      }
+      .hero-dot { display: none; }
+      .hero-bio-wrap { grid-template-columns: 1fr; gap: 1.125rem; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .cards-grid-3 { grid-template-columns: 1fr; }
+      .stack-grid { grid-template-columns: 1fr; }
+      .article-card { flex-direction: column; gap: 12px; }
+      .footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO — UPDATED -->
+  <section class="hero">
+    <div class="hero-geo"></div>
+    <div class="hero-geo-2"></div>
+
+    <p class="hero-eyebrow fade-in">Portfolio · Applied Economics, AI Policy Research &amp; Decision Science</p>
+
+    <h1 class="hero-name fade-up delay-1">Sherriff<br>Abdul-Hamid</h1>
+
+    <!-- FIX 1: Title updated -->
+    <div class="hero-title-row fade-up delay-2">
+      <span>Applied Economist</span>
+      <span class="hero-dot">·</span>
+      <span>Data Scientist</span>
+      <span class="hero-dot">·</span>
+      <span>AI &amp; Public Policy Researcher</span>
+      <span class="hero-dot">·</span>
+      <span>Causal Inference Specialist</span>
+      <span class="hero-dot">·</span>
+      <span>Decision Intelligence Builder</span>
+    </div>
+
+    <div class="hero-bio-wrap fade-up delay-3">
+    <p class="hero-bio">
+      I build decision intelligence systems that help institutions make better decisions
+      when evidence is incomplete, resources are constrained, and uncertainty is
+      unavoidable — combining causal inference, forecasting, optimization,
+      cost-effectiveness analysis, and machine learning across four domains:
+      social protection and public health, energy infrastructure, digital marketplace
+      economics, and AI governance.
+    </p>
+    <p class="hero-bio">
+      My research examines how AI systems deployed in government settings create
+      representation failures — how systematic missingness and distribution shift in
+      administrative training data cause public-sector AI to fail the populations most
+      dependent on public services. This work is grounded in direct field experience:
+      I personally enrolled 1,250 women into Ghana's National Health Insurance Authority
+      who were invisible to both official digital enrollment pathways despite confirmed
+      eligibility — not a policy failure, but a data failure. That experience is now
+      the empirical foundation of my interest in AI safety research.
+    </p>
+    <p class="hero-bio">
+      As Founder and Executive Director of Poverty 360, I have led programs
+      across five countries, directing USAID, UKAID, UNDP, and USADF-funded
+      initiatives covering 25,000+ evaluated beneficiaries. My academic foundation
+      spans Development Economics, Energy Economics, Resource Economics, Health
+      Economics, and Econometrics — providing the disciplinary depth behind the
+      analytical methods I apply in practice.
+    </p>
+    </div>
+
+    <div class="hero-creds fade-up delay-4">
+      <span class="cred-pill">EB-1A Extraordinary Ability</span>
+      <span class="cred-pill">Turing Frontier Fellow</span>
+      <span class="cred-pill">Obama Foundation Leaders Award</span>
+      <span class="cred-pill">Mandela Washington Fellow</span>
+      <span class="cred-pill">BlueDot Impact: Future of AI Safety</span>
+    </div>
+  </section>
+
+  <!-- CORE RESEARCH AREAS SECTION -->
+  <section class="section" style="padding-top: 8px;">
+    <div class="section-label">Core Research Areas</div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;">
+      <span class="research-pill">Public-Sector AI</span>
+      <span class="research-pill">AI Governance & Responsible AI</span>
+      <span class="research-pill">Causal Inference</span>
+      <span class="research-pill">Decision Intelligence Systems</span>
+      <span class="research-pill">Cost-Effectiveness Analysis</span>
+      <span class="research-pill">Marketplace Economics</span>
+      <span class="research-pill">Energy Economics</span>
+      <span class="research-pill">Social Protection Systems</span>
+    </div>
+  </section>
+  <!-- END CORE RESEARCH AREAS SECTION -->
+
+  <!-- FEATURED TOOLS — FIX 3: Connecting sentence added -->
+  <section class="section">
+    <p class="section-eye fade-up">Applied Work</p>
+    <h2 class="section-title fade-up delay-1">Four Portfolios. One Question.</h2>
+    <p class="section-sub fade-up delay-2">
+      How can institutions make better decisions when evidence is incomplete,
+      resources are constrained, and uncertainty is unavoidable?
+      <br><br>
+      This portfolio contains four bodies of applied work built from that question —
+      each applying a shared analytical framework of causal inference, optimization,
+      forecasting, and cost-effectiveness analysis to a different institutional domain.
+      <br><br>
+      Social protection and public health tools for SNAP programme officers, Medicaid
+      administrators, and global health funders. Energy infrastructure analytics for
+      utility planners, grid investment analysts, and regulatory economists. Marketplace
+      analytics applying causal inference and economic modelling to two-sided platform
+      strategy. And AI governance research examining how representation failures in
+      public-sector AI systems affect access to critical services.
+    </p>
+
+    <div class="cards-grid">
+
+      <div class="card fade-up delay-1" style="border-top-color: var(--red);">
+        <div class="card-number">01</div>
+        <span class="card-tag" style="background: var(--red);">Medicaid · Healthcare</span>
+        <h3 class="card-title">Medicaid &amp; Healthcare Access Risk Monitor</h3>
+        <p class="card-desc">
+          State-level coverage risk scoring for all 50 US states.
+          Identifies where Medicaid access pressure is highest across
+          insurance gaps, cost burden, income capacity, and rural reach —
+          with structured policy briefs and priority-band classification.
+        </p>
+        <p class="card-users">For: State Medicaid officers · Federal policy teams</p>
+        <div class="card-actions">
+          <a href="https://medicaid-healthcare-access-risk-monitor.streamlit.app/"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/MEDICAID-HEALTHCARE-ACCESS-RISK-MONITOR"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card fade-up delay-2" style="border-top-color: var(--amber);">
+        <div class="card-number">02</div>
+        <span class="card-tag" style="background: var(--amber);">SNAP · Food Security</span>
+        <h3 class="card-title">Safety Net Risk Monitor</h3>
+        <p class="card-desc">
+          Proactive SNAP and food security vulnerability targeting.
+          Identifies communities at highest risk before they reach crisis point —
+          with structured policy briefs, plain-language regional insights,
+          and immediate recommended actions per area.
+        </p>
+        <p class="card-users">For: SNAP outreach coordinators · State food security teams</p>
+        <div class="card-actions">
+          <a href="https://safety-net-risk-monitor.streamlit.app/"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/SAFETY-NET-RISK-MONITOR"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card fade-up delay-3" style="border-top-color: var(--navy);">
+        <div class="card-number">03</div>
+        <span class="card-tag" style="background: var(--navy);">Budget · Allocation</span>
+        <h3 class="card-title">Public Budget Allocation Tool</h3>
+        <p class="card-desc">
+          Need-based government budget distribution across regions.
+          Generates a ministerial-grade decision brief with risk flags,
+          implication analysis, and immediate action steps —
+          designed for programme directors managing benefits delivery cycles.
+        </p>
+        <p class="card-users">For: Government programme directors · Budget administrators</p>
+        <div class="card-actions">
+          <a href="https://smart-resource-allocation-dashboard.streamlit.app/"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/PUBLIC-BUDGET-ALLOCATION-TOOL"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card fade-up delay-4" style="border-top-color: var(--green);">
+        <div class="card-number">04</div>
+        <span class="card-tag" style="background: var(--green);">Global Health · CEA</span>
+        <h3 class="card-title">GovFund Allocation Engine</h3>
+        <p class="card-desc">
+          Cost-effectiveness decision tool for global health funders.
+          Models cost-per-life-saved across malaria, nutrition, and social
+          protection interventions — with sensitivity analysis and
+          bottom-line funding prioritisation recommendations.
+        </p>
+        <p class="card-users">For: Global health funders · USAID · Gates Foundation officers</p>
+        <div class="card-actions">
+          <a href="https://govfund-allocation-engine.streamlit.app/"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/GOVFUND-ALLOCATION-ENGINE"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AI GOVERNANCE SECTION -->
+  <section class="section">
+    <div class="section-label">AI Governance · Representation Failures · Decision Systems</div>
+    <h2 class="section-title">AI Governance & Decision Systems</h2>
+    <p class="section-subtitle">
+      The intellectual thread connecting all four portfolios. Research and frameworks
+      examining how AI systems deployed in public-sector and institutional settings
+      create representation failures — and what governance frameworks can detect and
+      mitigate those failures before they affect real-world access to services,
+      benefits, and resources.
+    </p>
+
+    <div class="tool-card">
+      <div class="card-number">R1</div>
+      <div class="card-tags">Behavioral Divergence · Inference-Time Constraints · Algorithmic Exclusion · AI Governance</div>
+      <h3 class="card-title">Auditing Constraint-Induced Behavioral Divergence in Autonomous AI Agents</h3>
+      <p class="card-description">
+        Active research examining how inference-time resource constraints — token budgets,
+        latency caps, processing limits — cause autonomous AI agents to exhibit optimization
+        failures and systematic exclusion in high-stakes institutional deployments.
+        Proof-of-concept evaluation pipeline confirmed the token compression mechanism
+        across 100 controlled API calls (−29.2 output tokens, −322ms latency under
+        constrained conditions). Open-source Python pipeline computes Wilson CIs,
+        chi-square test, and divergence coefficient.
+      </p>
+      <p class="card-audience">Relevant to: AI safety researchers · Public-sector AI teams · RAND CAST · AI governance researchers</p>
+      <a class="card-link" href="https://github.com/S-ABDUL-AI/constraint-divergence-eval" target="_blank">GitHub →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="card-number">R2</div>
+      <div class="card-tags">Sycophancy · Behavioral Consistency · LLM Evaluation · AI Alignment</div>
+      <h3 class="card-title">Sycophancy Probe — Behavioral Consistency Eval Suite</h3>
+      <p class="card-description">
+        Empirical measurement of approval-seeking behavior in large language models.
+        A 3-condition experiment (baseline / soft pushback / confident pushback)
+        across 20 factual questions in four domains tests whether Claude reverses
+        correct answers under user social pressure. Confident pushback produced a
+        17.6% sycophancy rate with a dose-response escalation pattern. Pipeline
+        computes Wilson CIs, chi-square test, and domain breakdown across
+        mathematics, science, history, and policy.
+      </p>
+      <p class="card-audience">Relevant to: AI alignment researchers · LLM evaluation teams · AI safety researchers</p>
+      <a class="card-link" href="https://github.com/S-ABDUL-AI/sycophancy-probe" target="_blank">GitHub →</a>
+    </div>
+
+    <!-- RESEARCH AGENDA SUBSECTION -->
+    <div style="margin-top:32px; background:white; border-radius:12px; padding:28px 30px;
+         box-shadow:0 2px 8px rgba(0,0,0,0.07); border-left:5px solid #1F3864;">
+      <div style="font-weight:700; color:#1F3864; font-size:1.05rem; margin-bottom:14px;">
+        Research Agenda
+      </div>
+      <p style="font-size:0.90rem; color:#555; line-height:1.7; margin-bottom:18px;">
+        Four connected research themes extending from the work in this portfolio:
+      </p>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:18px;">
+
+        <div>
+          <div style="font-weight:600; color:#1F3864; font-size:0.92rem; margin-bottom:6px;">
+            1. AI and Social Protection
+          </div>
+          <div style="font-size:0.86rem; color:#555; line-height:1.6;">
+            How AI-assisted eligibility and targeting systems affect access to
+            healthcare, benefits, and social protection programmes.
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:600; color:#1F3864; font-size:0.92rem; margin-bottom:6px;">
+            2. Representation Failures in Administrative Data
+          </div>
+          <div style="font-size:0.86rem; color:#555; line-height:1.6;">
+            How systematic missingness and selection bias in administrative
+            records propagate into distribution shift in deployed AI systems.
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:600; color:#1F3864; font-size:0.92rem; margin-bottom:6px;">
+            3. Decision Intelligence for Public Institutions
+          </div>
+          <div style="font-size:0.86rem; color:#555; line-height:1.6;">
+            Frameworks combining causal inference, optimization, and forecasting
+            to support institutional decisions under incomplete evidence.
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:600; color:#1F3864; font-size:0.92rem; margin-bottom:6px;">
+            4. Cost-Effectiveness and Resource Allocation
+          </div>
+          <div style="font-size:0.86rem; color:#555; line-height:1.6;">
+            Applying welfare economics and expected-value analysis to resource
+            allocation decisions across health, energy, and social protection.
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- END RESEARCH AGENDA SUBSECTION -->
+
+  </section>
+  <!-- END AI GOVERNANCE SECTION -->
+
+  <!-- ENERGY SECTION -->
+  <section class="section section-alt">
+    <p class="section-eye fade-up">Energy Infrastructure · Utility Analytics</p>
+    <h2 class="section-title fade-up delay-1">Energy Infrastructure Analytics</h2>
+    <p class="section-sub fade-up delay-2">
+      Four production-grade tools applying machine learning, econometrics, and
+      expected-value optimization to the analytical problems that electric utility
+      infrastructure teams face — from wildfire risk scoring and capital investment
+      prioritization to demand forecasting and energy price shock transmission.
+    </p>
+    <p class="section-sub fade-up delay-2" style="margin-top: -28px; margin-bottom: 40px;">
+      <a href="https://energy-portfolio.streamlit.app" target="_blank">View full energy portfolio →</a>
+    </p>
+
+    <div class="cards-grid">
+
+      <div class="card fade-up delay-1" style="border-top-color: var(--red);">
+        <div class="card-number">E1</div>
+        <span class="card-tag" style="background: var(--red);">Wildfire Risk · Asset Failure · CPUC RBDM</span>
+        <h3 class="card-title">California Grid Asset Risk &amp; Wildfire Vulnerability Dashboard</h3>
+        <p class="card-desc">
+          Random Forest failure prediction model (ROC-AUC 0.86) scoring 600 simulated
+          Southern California utility assets across 9 environmental and operational features.
+          Budget optimization engine delivering $28M+ in risk reduction from a $3M maintenance
+          budget — aligned to CPUC Risk-Based Decision-Making thresholds.
+        </p>
+        <p class="card-users">For: Utility asset managers · Grid operations teams · Regulatory analysts</p>
+        <div class="card-actions">
+          <a href="https://california-grid-asset-risk-wildfire-vulnerability-dashboard-hm.streamlit.app"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/California-Grid-Asset-Risk-Wildfire-Vulnerability-Dashboard"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card fade-up delay-2" style="border-top-color: var(--energy);">
+        <div class="card-number">E2</div>
+        <span class="card-tag" style="background: var(--energy);">Benefit-Cost Analysis · Portfolio Optimization · Monte Carlo</span>
+        <h3 class="card-title">Grid Investment Prioritization Engine</h3>
+        <p class="card-desc">
+          Expected-value portfolio optimization model ranking 100 infrastructure projects
+          by BCR, NPV, and risk reduction per dollar under budget constraints. Monte Carlo
+          P10–P90 uncertainty quantification and efficient frontier analysis — aligned to
+          CPUC RBDM benefit-cost filing requirements.
+        </p>
+        <p class="card-users">For: Capital planning teams · Regulatory economists · Infrastructure directors</p>
+        <div class="card-actions">
+          <a href="https://grid-investment-prioritization-engine.streamlit.app"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/grid-investment-prioritization-engine"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card fade-up delay-3" style="border-top-color: var(--amber);">
+        <div class="card-number">E3</div>
+        <span class="card-tag" style="background: var(--amber);">SARIMA · Load Forecasting · EV Adoption · Solar Integration</span>
+        <h3 class="card-title">California Electricity Load Forecasting &amp; Grid Demand Planning</h3>
+        <p class="card-desc">
+          SARIMA time series model forecasting electricity demand 12–24 months ahead across
+          four Southern California service territory zones. Interactive EV adoption and rooftop
+          solar penetration scenario builder with capacity investment trigger analysis.
+        </p>
+        <p class="card-users">For: Grid planners · Demand forecasting teams · Integrated resource planning analysts</p>
+        <div class="card-actions">
+          <a href="https://california-grid-demand-forecast.streamlit.app"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/california-grid-demand-forecast"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card fade-up delay-4" style="border-top-color: var(--green);">
+        <div class="card-number">E4</div>
+        <span class="card-tag" style="background: var(--green);">VAR · VECM · Johansen Cointegration · IRF · FEVD</span>
+        <h3 class="card-title">Oil Price Shock Transmission Dashboard</h3>
+        <p class="card-desc">
+          Interactive econometric research tool built from MSc Economics thesis research
+          (KNUST, 2022). Full pipeline — ADF unit root tests, Johansen cointegration, VAR
+          estimation, orthogonalized IRF, and FEVD — exploring oil price shock transmission
+          into Ghana's public debt dynamics across 37 years of annual data.
+        </p>
+        <p class="card-users">For: Energy economists · Regulatory economists · Policy researchers</p>
+        <div class="card-actions">
+          <a href="https://oil-price-shock-transmission.streamlit.app"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/oil-price-shock-transmission"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- END ENERGY SECTION -->
+
+  <!-- MARKETPLACE SECTION -->
+  <section class="section section-alt">
+    <p class="section-eye fade-up">Marketplace Analytics · Causal Inference · Platform Economics</p>
+    <h2 class="section-title fade-up delay-1">Marketplace Analytics Portfolio</h2>
+    <p class="section-sub fade-up delay-2">
+      Three production-grade tools applying causal inference, experimentation science,
+      and marketplace economics to the strategic questions that two-sided platform
+      analytics teams face — from A/B testing and network effects to supply-demand
+      optimisation and intervention incrementality.
+    </p>
+    <p class="section-sub fade-up delay-2" style="margin-top: -28px; margin-bottom: 40px;">
+      <a href="https://marketplace-analytics-portfolio.streamlit.app" target="_blank">View full marketplace portfolio →</a>
+    </p>
+
+    <div class="cards-grid cards-grid-3">
+
+      <div class="card fade-up delay-1" style="border-top-color: var(--navy);">
+        <div class="card-number">M1</div>
+        <span class="card-tag" style="background: var(--navy);">CUPED · Sequential Testing · Network Effects · Uplift Modelling · Bayesian A/B</span>
+        <h3 class="card-title">Marketplace Growth &amp; Experimentation Lab</h3>
+        <p class="card-desc">
+          Advanced experimentation platform demonstrating CUPED variance reduction,
+          network effects contamination analysis, sequential testing with alpha spending,
+          promotion uplift modelling with four-quadrant segmentation, and a Bayesian
+          decision framework with automated ship/no-ship recommendations.
+          Includes an AI Analytics Copilot powered by Claude.
+        </p>
+        <p class="card-users">For: Product analytics teams · Growth scientists · Experimentation leads</p>
+        <div class="card-actions">
+          <a href="https://marketplacegrowthexperimentationlab.streamlit.app"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/marketplace-experimentation-lab"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card fade-up delay-2" style="border-top-color: var(--energy);">
+        <div class="card-number">M2</div>
+        <span class="card-tag" style="background: var(--energy);">DiD · Synthetic Control · PSM · Instrumental Variables · Event Study</span>
+        <h3 class="card-title">Marketplace Causal Inference &amp; Incrementality Engine</h3>
+        <p class="card-desc">
+          Five-method causal inference platform for estimating the true incremental
+          impact of marketplace interventions. Answers whether a programme caused
+          booking growth or would growth have happened anyway. Covers
+          Difference-in-Differences, Synthetic Control, Propensity Score Matching,
+          Instrumental Variables, Event Study, and an Incrementality Simulator
+          with ROI decision output.
+        </p>
+        <p class="card-users">For: Marketplace science teams · Economics teams · Strategy analytics</p>
+        <div class="card-actions">
+          <a href="https://marketplace-causal-inference-incrementality-engine.streamlit.app"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/causal-inference-incrementality-engine"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card fade-up delay-3" style="border-top-color: var(--amber);">
+        <div class="card-number">M3</div>
+        <span class="card-tag" style="background: var(--amber);">Price Elasticity · CLV · Monte Carlo · Market Expansion · Dynamic Pricing</span>
+        <h3 class="card-title">Marketplace Economics &amp; Supply-Demand Optimization Engine</h3>
+        <p class="card-desc">
+          Strategic decision-support platform answering the $50M question: should
+          Airbnb invest in more hosts or more guests? Six-tab economics engine covering
+          supply-demand health monitoring, log-log price elasticity and revenue
+          optimisation, CLV and cohort retention analysis, multi-market expansion
+          ROI scoring, 10,000-scenario Monte Carlo forecasting, and auto-generated
+          executive recommendations.
+        </p>
+        <p class="card-users">For: Marketplace economists · Strategy leads · Platform analytics directors</p>
+        <div class="card-actions">
+          <a href="https://marketplace-economics-engine.streamlit.app"
+             target="_blank" class="card-btn">Open Tool →</a>
+          <a href="https://github.com/S-ABDUL-AI/marketplace-economics-engine"
+             target="_blank" class="card-btn-secondary">GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- END MARKETPLACE SECTION -->
+
+  <!-- CAUSAL INFERENCE SECTION -->
+  <section class="section">
+    <div class="section-label">Causal Inference · Quasi-Experimental Methods · Policy Evaluation</div>
+    <h2 class="section-title">Causal Inference & Policy Evaluation</h2>
+    <p class="section-subtitle">
+      The methodological foundation behind the portfolio. Applied causal inference
+      across public policy, social protection, energy investment evaluation,
+      and marketplace analytics — answering the question that dashboards cannot:
+      did this intervention actually cause the outcome, or would it have happened anyway?
+    </p>
+
+    <div class="method-grid" style="display:grid; grid-template-columns: repeat(3, 1fr);
+         gap:16px; margin-top:20px;">
+
+      <div style="background:white; border-radius:10px; padding:18px;
+           box-shadow:0 2px 8px rgba(0,0,0,0.07); border-top:4px solid #1F3864;">
+        <div style="font-weight:700; color:#1F3864; margin-bottom:8px;">
+          Difference-in-Differences
+        </div>
+        <div style="font-size:0.87rem; color:#555; line-height:1.55;">
+          Panel data evaluation of policy interventions. Applied across social
+          protection programmes, marketplace experiments, and energy investment analysis.
+        </div>
+      </div>
+
+      <div style="background:white; border-radius:10px; padding:18px;
+           box-shadow:0 2px 8px rgba(0,0,0,0.07); border-top:4px solid #1F3864;">
+        <div style="font-weight:700; color:#1F3864; margin-bottom:8px;">
+          Synthetic Control
+        </div>
+        <div style="font-size:0.87rem; color:#555; line-height:1.55;">
+          Counterfactual estimation for single treated units. Used in marketplace
+          intervention evaluation and regional programme assessment.
+        </div>
+      </div>
+
+      <div style="background:white; border-radius:10px; padding:18px;
+           box-shadow:0 2px 8px rgba(0,0,0,0.07); border-top:4px solid #1F3864;">
+        <div style="font-weight:700; color:#1F3864; margin-bottom:8px;">
+          Propensity Score Matching
+        </div>
+        <div style="font-size:0.87rem; color:#555; line-height:1.55;">
+          Selection bias correction for observational studies. Applied in
+          social protection targeting evaluation and marketplace user analysis.
+        </div>
+      </div>
+
+      <div style="background:white; border-radius:10px; padding:18px;
+           box-shadow:0 2px 8px rgba(0,0,0,0.07); border-top:4px solid #388e3c;">
+        <div style="font-weight:700; color:#388e3c; margin-bottom:8px;">
+          Instrumental Variables
+        </div>
+        <div style="font-size:0.87rem; color:#555; line-height:1.55;">
+          Endogeneity correction for non-random treatment selection. Applied in
+          marketplace programme evaluation and energy investment analysis.
+        </div>
+      </div>
+
+      <div style="background:white; border-radius:10px; padding:18px;
+           box-shadow:0 2px 8px rgba(0,0,0,0.07); border-top:4px solid #388e3c;">
+        <div style="font-weight:700; color:#388e3c; margin-bottom:8px;">
+          Event Study
+        </div>
+        <div style="font-size:0.87rem; color:#555; line-height:1.55;">
+          Pre-trend validation and dynamic treatment effect estimation.
+          Used for parallel trends testing and intervention ramp-up analysis.
+        </div>
+      </div>
+
+      <div style="background:white; border-radius:10px; padding:18px;
+           box-shadow:0 2px 8px rgba(0,0,0,0.07); border-top:4px solid #388e3c;">
+        <div style="font-weight:700; color:#388e3c; margin-bottom:8px;">
+          CUPED & Bayesian A/B
+        </div>
+        <div style="font-size:0.87rem; color:#555; line-height:1.55;">
+          Variance reduction and probabilistic decision frameworks for
+          marketplace experimentation. Reduces required sample size by 30–50%.
+        </div>
+      </div>
+
+    </div>
+
+    <p style="margin-top:20px; font-size:0.90rem; color:#555; line-height:1.65;">
+      These methods are applied across all four portfolio domains — from evaluating
+      whether a social protection programme reached the right households, to estimating
+      the true causal impact of a marketplace intervention, to auditing whether an
+      AI eligibility system produces unbiased outcomes across population subgroups.
+      See the <a href="https://marketplace-causal-inference-incrementality-engine.streamlit.app"
+      target="_blank">Causal Inference & Incrementality Engine</a> for a
+      production demonstration.
+    </p>
+
+  </section>
+  <!-- END CAUSAL INFERENCE SECTION -->
+
+  <!-- METHODS AND STACK SECTION -->
+  <section class="section">
+    <div class="section-label">Technical Reference</div>
+    <h2 class="section-title">Methods & Technical Stack</h2>
+    <p class="section-subtitle">
+      The analytical methods and tools applied across all four portfolios.
+    </p>
+
+    <!-- METHODS CATEGORIES -->
+    <div style="margin-top:24px;">
+
+      <div style="font-weight:700; color:#1F3864; font-size:0.95rem; margin-bottom:14px;
+           text-transform:uppercase; letter-spacing:0.05em;">
+        Methods
+      </div>
+
+      <div class="stack-grid">
+
+      <div>
+        <div style="font-weight:600; color:#1F3864; font-size:0.82rem; margin-bottom:8px;">
+          Causal Inference & Policy Evaluation
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <span class="method-pill">Difference-in-Differences</span>
+          <span class="method-pill">Synthetic Control</span>
+          <span class="method-pill">Propensity Score Matching</span>
+          <span class="method-pill">Instrumental Variables</span>
+          <span class="method-pill">Regression Discontinuity (RDD)</span>
+          <span class="method-pill">Event Study</span>
+          <span class="method-pill">Quasi-Experimental Design</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-weight:600; color:#1F3864; font-size:0.82rem; margin-bottom:8px;">
+          Experimentation & Product Analytics
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <span class="method-pill">A/B Testing</span>
+          <span class="method-pill">CUPED</span>
+          <span class="method-pill">Sequential Testing (Alpha Spending)</span>
+          <span class="method-pill">Bayesian Inference</span>
+          <span class="method-pill">Network Effects Analysis (SUTVA)</span>
+          <span class="method-pill">Uplift Modeling</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-weight:600; color:#1F3864; font-size:0.82rem; margin-bottom:8px;">
+          Forecasting & Optimization
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <span class="method-pill">Time Series Forecasting (SARIMA)</span>
+          <span class="method-pill">ARIMA / Prophet</span>
+          <span class="method-pill">VAR / VECM</span>
+          <span class="method-pill">Monte Carlo Simulation</span>
+          <span class="method-pill">Portfolio Optimization</span>
+          <span class="method-pill">Linear Programming</span>
+          <span class="method-pill">Machine Learning (Random Forest, Gradient Boosting)</span>
+          <span class="method-pill">Survival Analysis</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-weight:600; color:#1F3864; font-size:0.82rem; margin-bottom:8px;">
+          Economics & Decision Science
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <span class="method-pill">Cost-Effectiveness Analysis</span>
+          <span class="method-pill">Price Elasticity Modeling</span>
+          <span class="method-pill">Customer Lifetime Value Modeling</span>
+          <span class="method-pill">Expected Value / Risk-Based Decision Making</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-weight:600; color:#1F3864; font-size:0.82rem; margin-bottom:8px;">
+          Financial & Business Analytics
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <span class="method-pill">Predictive Modeling</span>
+          <span class="method-pill">Financial Forecasting</span>
+          <span class="method-pill">Profitability Analysis</span>
+          <span class="method-pill">Scenario Planning</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-weight:600; color:#1F3864; font-size:0.82rem; margin-bottom:8px;">
+          AI Governance & Evaluation
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <span class="method-pill">Distribution Shift Detection</span>
+          <span class="method-pill">Representation Bias Auditing</span>
+          <span class="method-pill">Algorithmic Exclusion Analysis</span>
+          <span class="method-pill">ETL Pipeline Automation</span>
+        </div>
+      </div>
+
+      </div>
+
+    </div>
+
+    <!-- TOOLS CATEGORIES -->
+    <div style="margin-top:28px;">
+
+      <div style="font-weight:700; color:#388e3c; font-size:0.95rem; margin-bottom:14px;
+           text-transform:uppercase; letter-spacing:0.05em;">
+        Tools
+      </div>
+
+      <div class="stack-grid">
+
+      <div>
+        <div style="font-weight:600; color:#388e3c; font-size:0.82rem; margin-bottom:8px;">
+          Languages & Statistical Computing
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <span class="method-pill method-pill-green">Python</span>
+          <span class="method-pill method-pill-green">SQL</span>
+          <span class="method-pill method-pill-green">R</span>
+          <span class="method-pill method-pill-green">Stata</span>
+          <span class="method-pill method-pill-green">statsmodels / scikit-learn</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-weight:600; color:#388e3c; font-size:0.82rem; margin-bottom:8px;">
+          Visualization & BI
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <span class="method-pill method-pill-green">Plotly</span>
+          <span class="method-pill method-pill-green">Tableau</span>
+          <span class="method-pill method-pill-green">Power BI</span>
+          <span class="method-pill method-pill-green">Streamlit</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-weight:600; color:#388e3c; font-size:0.82rem; margin-bottom:8px;">
+          Cloud, AI & Infrastructure
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <span class="method-pill method-pill-green">AWS</span>
+          <span class="method-pill method-pill-green">Google Cloud</span>
+          <span class="method-pill method-pill-green">Azure</span>
+          <span class="method-pill method-pill-green">Databricks</span>
+          <span class="method-pill method-pill-green">Snowflake</span>
+          <span class="method-pill method-pill-green">Claude API / LLM Integration</span>
+          <span class="method-pill method-pill-green">GitHub Actions</span>
+          <span class="method-pill method-pill-green">Git</span>
+        </div>
+      </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- END METHODS AND STACK SECTION -->
+
+  <hr class="hr"/>
+
+  <!-- ADDITIONAL TOOLS -->
+  <section class="section section-alt">
+    <p class="section-eye fade-up">Additional Tools</p>
+    <h2 class="section-title fade-up delay-1">More from the Portfolio</h2>
+    <p class="section-sub fade-up delay-2">
+      Supporting tools covering global health data pipelines and supply chain optimisation.
+    </p>
+
+    <div class="tool-list fade-up delay-3">
+      <div class="tool-row">
+        <div>
+          <div class="tool-name">Global Vaccination Coverage Explorer</div>
+          <div class="tool-desc">WHO vaccination data across 190+ countries — automated ETL pipeline with weekly refresh via GitHub Actions for public health programme managers and researchers.</div>
+        </div>
+        <div class="tool-row-links">
+          <a href="https://global-vaccination-coverage-explorer.streamlit.app/"
+             target="_blank" class="tool-link">Open →</a>
+          <a href="https://github.com/S-ABDUL-AI/GLOBAL-VACCINATION-COVERAGE-EXPLORER"
+             target="_blank" class="tool-link">GitHub →</a>
+        </div>
+      </div>
+      <div class="tool-row">
+        <div>
+          <div class="tool-name">Humanitarian Procurement Optimiser</div>
+          <div class="tool-desc">Linear programming tool for logistics cost minimisation across field programme supply chains in low-resource environments.</div>
+        </div>
+        <div class="tool-row-links">
+          <a href="https://appuctionplanningoptimizationlinearprogramming.streamlit.app/"
+             target="_blank" class="tool-link">Open →</a>
+          <a href="https://github.com/S-ABDUL-AI/PRODUCTION_PLANNING_OPTIMIZATION_LP"
+             target="_blank" class="tool-link">GitHub →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hr"/>
+
+  <!-- RESEARCH & WRITING — FIX 5: Current research entry added -->
+  <section class="section">
+    <p class="section-eye fade-up">Research &amp; Writing</p>
+    <h2 class="section-title fade-up delay-1">Research and Published Analysis</h2>
+    <p class="section-sub fade-up delay-2">
+      Current research and public-facing analysis applying empirical methods
+      to representation failures and distribution shift in public-sector AI systems,
+      social protection, global health funding decisions, and energy economics.
+    </p>
+
+    <div class="fade-up delay-3">
+
+      <!-- Current Research Entry -->
+      <div class="article-card">
+        <span class="article-label">Current Research</span>
+        <div>
+          <h3 class="article-title">Auditing Distribution Shift and Representation Failures in Public-Sector AI Systems</h3>
+          <p class="article-desc">
+            A comparative study of Ghana and the United States examining how systematic
+            missingness and representation bias in administrative datasets create distribution
+            shift in AI systems deployed in social protection settings. Using Ghana's National
+            Health Insurance Authority and US Medicaid administrative data to measure how
+            AI systems trained on institutionally visible populations fail hard-to-reach
+            populations — and what guardrails can detect and mitigate these failures
+            before they affect access to critical benefits.
+          </p>
+        </div>
+      </div>
+
+      <!-- Published Article -->
+      <div class="article-card">
+        <span class="article-label">Article</span>
+        <div>
+          <h3 class="article-title">What Does It Cost to Save a Life?</h3>
+          <p class="article-desc">
+            The same budget that saves 80 lives through cash transfers saves 220 through ITNs.
+            A cost-effectiveness framework comparing malaria interventions across Sub-Saharan Africa —
+            with sensitivity analysis, funding prioritisation, and an honest account of
+            where the model breaks down.
+          </p>
+          <a href="https://www.linkedin.com/pulse/question-nobody-asks-directly-why-silence-costing-lives-sherriff-woesc/?trackingId=PmdSKnM78gJsJnW3QdhINA%3D%3D"
+             target="_blank" class="article-link">Read on LinkedIn →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT DARK — FIX 4: $200M+ removed, framing updated -->
+  <section class="section section-dark">
+    <p class="section-eye fade-up" style="color: var(--gold); opacity:0.8;">About the Work</p>
+    <h2 class="section-title section-title-light fade-up delay-1">
+      Built for Decisions That Cannot Wait for Perfect Evidence
+    </h2>
+
+    <p class="about-body fade-up delay-2">
+      Every tool in this portfolio was built to answer one question:
+      <em>how can institutions make better decisions when evidence is incomplete,
+      resources are constrained, and uncertainty is unavoidable?</em>
+      <br><br>
+      I have spent 14 years building frameworks for exactly that situation — as Founder
+      and Executive Director of Poverty 360, leading programs across Ghana, Mali,
+      Burkina Faso, Niger, and the United States; as an applied economist and as a researcher examining how AI-assisted
+      decision systems create representation failures that exclude the most vulnerable
+      populations from public services.
+      <br><br>
+      The four portfolios here are the public-facing expression of that work. Social
+      protection tools built for the populations most likely to be excluded from formal
+      systems. Energy analytics tools built for utility planners making billion-dollar
+      infrastructure investment decisions. Marketplace analytics tools applying causal
+      inference and economic modelling to platform strategy. And AI governance research
+      examining how representation failures in administrative data propagate into
+      allocation errors in AI systems deployed by governments and institutions.
+      <br><br>
+      The analytical framework is consistent across all four domains: causal
+      identification, cost-effectiveness analysis, optimization under constraints,
+      and uncertainty quantification. The domain changes. The question does not.
+      <br><br>
+      Contributions to this body of work formed the basis of a successful EB-1A
+      Extraordinary Ability petition — approved by U.S. Citizenship and Immigration
+      Services.
+    </p>
+
+    <p class="about-body fade-up delay-3" style="font-size: 13px; margin-bottom: 20px;">
+      <strong style="color: var(--gold-lt);">Academic Foundation:</strong>
+      Development Economics · Energy Economics · Resource Economics · Health Economics ·
+      Welfare Economics · Econometrics · Cost-Benefit Analysis · Cost-Effectiveness Analysis
+    </p>
+
+    <div class="awards-grid fade-up delay-3">
+      <span class="award-pill">EB1-A Extraordinary Ability — USCIS</span>
+      <span class="award-pill">Turing Frontier Fellow</span>
+      <span class="award-pill">Obama Foundation Leaders Award</span>
+      <span class="award-pill">Mandela Washington Fellow — U.S. Dept of State</span>
+      <span class="award-pill">BlueDot Impact — Future of AI Safety</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">Who This Work Is For</div>
+    <h2 class="section-title">Target Audiences</h2>
+    <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:14px; margin-top:16px;">
+
+      <div style="background:white; border-radius:10px; padding:16px 20px;
+           box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+        <div style="font-weight:700; color:#1F3864; margin-bottom:6px;">
+          AI Policy & Governance
+        </div>
+        <div style="font-size:0.86rem; color:#555;">
+          Anthropic · RAND CAST · Rockefeller Foundation · Open Philanthropy ·
+          AI governance researchers · Public-sector AI teams
+        </div>
+      </div>
+
+      <div style="background:white; border-radius:10px; padding:16px 20px;
+           box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+        <div style="font-weight:700; color:#1F3864; margin-bottom:6px;">
+          Marketplace Analytics & Economics
+        </div>
+        <div style="font-size:0.86rem; color:#555;">
+          Airbnb · Uber · DoorDash · Lyft · Instacart ·
+          Staff-level product and marketplace analytics teams
+        </div>
+      </div>
+
+      <div style="background:white; border-radius:10px; padding:16px 20px;
+           box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+        <div style="font-weight:700; color:#1F3864; margin-bottom:6px;">
+          Energy & Utility Analytics
+        </div>
+        <div style="font-size:0.86rem; color:#555;">
+          Southern California Edison · PG&amp;E · SDG&amp;E · CAISO · EPRI ·
+          Utility data science and regulatory analytics teams
+        </div>
+      </div>
+
+      <div style="background:white; border-radius:10px; padding:16px 20px;
+           box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+        <div style="font-weight:700; color:#1F3864; margin-bottom:6px;">
+          Social Protection & Global Health
+        </div>
+        <div style="font-size:0.86rem; color:#555;">
+          GiveDirectly · GiveWell · USAID · UKAID · UNDP ·
+          Medicaid and SNAP programme officers · Global health funders
+        </div>
+      </div>
+
+      <div style="background:white; border-radius:10px; padding:16px 20px;
+           box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+        <div style="font-weight:700; color:#1F3864; margin-bottom:6px;">
+        
+      </div>
+
+      <div style="background:white; border-radius:10px; padding:16px 20px;
+           box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+        <div style="font-weight:700; color:#1F3864; margin-bottom:6px;">
+          Senior Analytics & Data Science
+        </div>
+        <div style="font-size:0.86rem; color:#555;">
+          Senior Staff and Principal analytics roles across tech,
+          consulting, and public-sector organisations requiring
+          causal inference and decision science depth
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">
+      <strong style="color: #E0D8C8; font-size: 13px;">Sherriff Abdul-Hamid</strong><br>
+      Los Angeles, CA &nbsp;·&nbsp; sherriffhamid001@gmail.com<br>
+      U.S. Permanent Resident — Fully Work-Authorized<br>
+      <span style="font-size: 10px; opacity: 0.55;">Site updated November 2026</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/abdul-hamid-sherriff-08583354/" class="footer-link">LinkedIn</a>
+      <a href="https://github.com/S-ABDUL-AI" class="footer-link">GitHub</a>
+      <a href="https://energy-portfolio.streamlit.app" class="footer-link">Energy Portfolio</a>
+      <a href="https://marketplace-analytics-portfolio.streamlit.app" class="footer-link">Marketplace Portfolio</a>
+      <a href="https://share.streamlit.io/user/s-abdul-ai" class="footer-link">All Apps</a>
+      <a href="mailto:sherriffhamid001@gmail.com" class="footer-link">Email</a>
+    </div>
+  </footer>
+
+</body>
+</html>
